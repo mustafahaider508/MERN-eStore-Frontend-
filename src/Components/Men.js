@@ -265,9 +265,54 @@ function Men() {
      
 
     </Card>
-    <Typography>NEW PRODUCT</Typography>
+  
+    <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
+
+    {newProducts.map(i => {
+      return (
+        <>
+        <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
+            <img style={{width:"100px"}} src={i.img} />
+            <div style={{paddingLeft:"10px"}}>
+                <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
+                <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
+                <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
+            </div>
+        </div>
+        </>
+      )
+    })}
+
               </Grid>
               <Grid item xs={12} md={6} lg={9}> 
+
+
+              <Grid container>
+               
+                <Grid item  xs={12}   lg={6}>
+                  <NavLink style={{textDecoration:"none",color:"black"}} to="/clothing">
+                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
+                <img  style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/handsome-man-shopping-for-new-clothes-in-store-picture-id1189091313?k=20&m=1189091313&s=612x612&w=0&h=8zBj4HJMAaCLzmRKfoHvfMueqa7FFPA3zHttnoFnp9Y=" />
+
+                </Card>
+                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
+              fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalized" }}>ABBIGLIAMENTO</p>
+                </NavLink>
+               
+                </Grid>
+                <Grid item xs={12} lg={6}>
+                <NavLink style={{textDecoration:"none",color:"black"}} to="/accessories">
+                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
+                <img style={{width:"100%",height:"50vh"}} src="men ass.jpeg" />
+
+                </Card>
+                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
+               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center" }}>ACCESSORI</p>
+                 </NavLink>
+                </Grid>
+               
+              </Grid>
+                
                 
                 
               <Grid container spacing={2}>
