@@ -314,7 +314,7 @@ function Men() {
               <Grid container>
                
                 <Grid item  xs={12}   lg={6}>
-                  <NavLink style={{textDecoration:"none",color:"black"}} to="/clothing">
+                  <NavLink  style={{textDecoration:"none",color:"black"}} to="/abbigliamento">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
                 <img  style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/handsome-man-shopping-for-new-clothes-in-store-picture-id1189091313?k=20&m=1189091313&s=612x612&w=0&h=8zBj4HJMAaCLzmRKfoHvfMueqa7FFPA3zHttnoFnp9Y=" />
 
@@ -325,7 +325,7 @@ function Men() {
                
                 </Grid>
                 <Grid item xs={12} lg={6}>
-                <NavLink style={{textDecoration:"none",color:"black"}} to="/accessories">
+                <NavLink   style={{textDecoration:"none",color:"black"}} to="/accessories">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
                 <img style={{width:"100%",height:"50vh"}} src="men ass.jpeg" />
 

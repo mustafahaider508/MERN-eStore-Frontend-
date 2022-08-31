@@ -6,10 +6,10 @@ import Women from './Components/Women';
 import SignIn from "./Components/Signin"
 import SignUp from "./Components/SignUp"
 import Shop from './Components/Shop';
-import Clothing from './Components/Clothing';
 import Men_Accessories from './Components/Men_Accessories';
 import Women_Clothing from './Components/Women_Clothing';
 import Women_Accessories from './Components/Women_Accessories';
+import Abbigliamento from "./Components/Abbigliamento";
 
 
 
@@ -24,11 +24,10 @@ function App() {
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/men" element={<Men />} />
           <Route path="/women" element={<Women />} />
-          <Route path="/clothing" element={<Clothing />} />
           <Route path="/accessories" element={<Men_Accessories />} />
           <Route path="/w_clothing" element={<Women_Clothing />} />
-          <Route path="/w_accessories" element={<Women_Accessories />} />
-          
+          <Route path="/w_accessories" element={<Women_Accessories />} /> 
+          <Route path="/abbigliamento" element={<Abbigliamento />} />
 
          </Routes>
          
