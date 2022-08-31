@@ -1,0 +1,91 @@
+.card{
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center!important;
+    background-image: url("/public/men.jpg");
+    background-size: cover;
+    height: 50vh;
+
+}
+.card1{
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center!important;
+    background-image: url("/public/wm.jpeg");
+    background-size: cover;
+    height: 50vh;
+
+}
+img{
+    width: 100%;
+}
+.heading{
+     background: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
+     text-align: center;
+     font-size: 35px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     background: rgb(237, 236, 236);
+  
+   
+    
+}
+.headingg{
+    margin-top:50px ;
+   margin-bottom: 10px;
+    font-size: 36px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-align: center;
+}
+.headingg1{
+    margin-top:25px ;
+   margin-bottom: 10px;
+    font-size: 36px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-align: center;
+}
+.dividerr{
+
+    height: 5px;
+    width: 70px;
+    background-color: orangered;
+    content: "";
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+.divider{
+    color:orangered;
+    text-align: center;
+    width: 10%;
+    height: 30px;
+   
+}
+.header_div{
+    justify-content: center;
+    align-items: center;
+
+}
+.specialOffer{
+    text-align: center;
+}
+.specialOffer{
+    margin-top: 30px;
+    margin-bottom: -20px;
+    color: orangered;
+    font-weight: 500;
+    font-size: 18px;
+    
+}

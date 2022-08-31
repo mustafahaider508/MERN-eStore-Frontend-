@@ -1,0 +1,140 @@
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-size: cover;
+    padding-left: 80px;
+    height: 80vh;
+  }
+  
+  .each-slide-effect span {
+  
+    font-size: 20px;
+    text-align: left;
+  }
+  .span1{
+    font-weight: 700;
+    letter-spacing: .4em;
+    color: #777;
+    margin-bottom: 0;
+  }
+  .span2{
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: #222;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+}
+.Button{
+  background: #ff4c3b;
+  width: 30%;
+  padding: 13px 0px;
+    color: #fff!important;
+    letter-spacing: .05em;
+    border: 2px solid #ff4c3b;
+    align-self: center;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 10%;
+  padding-top: 0rem;
+  padding-bottom: 9.25rem;
+  color: #fff;
+  text-align: left;
+}
+@media (min-width: 486px){
+  .carousel-caption {
+    padding-bottom: 1.25rem;
+  }
+  .span1{
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .4em;
+    color: #777;
+    margin-bottom: 0;
+  }
+  .span2{
+    margin-bottom: 0;
+    margin-top: 5px;
+    color: #222;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+}
+.Button{
+  font-size: 10px;
+  padding: 5px 0px;
+  width: 20%;
+  
+}
+}
+@media  (min-width: 768px){
+  .carousel-caption {
+    padding-bottom: 2.25rem;
+  }
+  .span1{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .4em;
+    color: #777;
+    margin-bottom: 0;
+  }
+  .span2{
+    margin-bottom: 0;
+    margin-top: 5px;
+    color: #222;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+}
+.Button{
+  font-size: 13px;
+  padding: 5px 0px;
+  width: 20%;
+  
+}
+}
+@media  (min-width: 1024px){
+  .span1{
+    font-weight: 700;
+    letter-spacing: .4em;
+    color: #777;
+    margin-bottom: 0;
+  }
+  .span2{
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: #222;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+}
+.Button{
+  background: #ff4c3b;
+  width: 30%;
+  padding: 13px 0px;
+    color: #fff!important;
+    letter-spacing: .05em;
+    border: 2px solid #ff4c3b;
+    align-self: center;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 10%;
+  padding-top: 0rem;
+  padding-bottom: 9.25rem;
+  color: #fff;
+  text-align: left;
+
+}
+}
+
+  
+  

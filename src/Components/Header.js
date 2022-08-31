@@ -1,0 +1,63 @@
+import React from 'react';
+import "./Header.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faHeart, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
+import Dummy from '../Dummy';
+import Navbar from './Navbar';
+import Hidden from '@mui/material/Hidden';
+
+
+
+
+
+
+function Header() {
+ 
+    
+  return (
+    <>
+   
+   <Hidden smDown >
+    <div className='top-header'>
+        <div  className='container'>
+            <div className='row'>
+                <div className='col-lg-6'>
+                    <div className='header-content'>
+                        <ul>
+                            <li>Welcome to our store</li>
+                            
+                            <li>    <FontAwesomeIcon className='icon' icon={faPhone} /> Call Us: 123 - 456 - 7890 </li>
+                        </ul>
+
+                    </div>
+                    </div>
+                    <div className='text-right col-lg-6'>
+                        <ul className='header-dropdown'>
+                            <li className='mobile-wishlist'><FontAwesomeIcon  className='icon' icon={faHeart} /> wishlist</li>
+                            <li className='onhover-dropdown mobile-account'>
+                                <span style={{display:"flex",alignItems:"center"}}>
+                                <FontAwesomeIcon className='icon' icon={faUser} />
+                                <Dummy />
+                                </span>
+                      
+                           
+                                  </li>
+                                 </ul>
+                              </div>
+                           </div>
+                         </div>
+                     </div>
+                    
+                 
+                         <Navbar />
+                     
+                         </Hidden>
+ 
+  
+   
+      
+    </>
+  )
+}
+
+export default Header
