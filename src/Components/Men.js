@@ -325,7 +325,7 @@ function Men() {
                
                 </Grid>
                 <Grid item xs={12} lg={6}>
-                <NavLink   style={{textDecoration:"none",color:"black"}} to="/accessories">
+                <NavLink   style={{textDecoration:"none",color:"black"}} to="/men_Accessories">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
                 <img style={{width:"100%",height:"50vh"}} src="men ass.jpeg" />
 

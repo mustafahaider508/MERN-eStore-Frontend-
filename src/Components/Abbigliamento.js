@@ -314,9 +314,9 @@ function Abbigliamento() {
               <Grid container>
                
                 <Grid item  xs={12}   lg={6}>
-                  <NavLink style={{textDecoration:"none",color:"black"}} to="/clothing">
+                  <NavLink style={{textDecoration:"none",color:"black"}} to="/vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/handsome-man-shopping-for-new-clothes-in-store-picture-id1189091313?k=20&m=1189091313&s=612x612&w=0&h=8zBj4HJMAaCLzmRKfoHvfMueqa7FFPA3zHttnoFnp9Y=" />
+                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/27/25/74/2725743413e79678fcd7097edd497a1c.jpg" />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -325,9 +325,9 @@ function Abbigliamento() {
                
                 </Grid>
                 <Grid item xs={12} lg={6}>
-                <NavLink style={{textDecoration:"none",color:"black"}} to="/accessories">
+                <NavLink style={{textDecoration:"none",color:"black"}} to="/customize">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="men ass.jpeg" />
+                <img style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/e1/49/5f/e1495f2d499747bc6e42f9aa9646305f.jpg" />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",

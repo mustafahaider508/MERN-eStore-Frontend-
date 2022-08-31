@@ -10,6 +10,8 @@ import Men_Accessories from './Components/Men_Accessories';
 import Women_Clothing from './Components/Women_Clothing';
 import Women_Accessories from './Components/Women_Accessories';
 import Abbigliamento from "./Components/Abbigliamento";
+import Vintage from './Components/Vintage';
+import Customize from './Components/Customize';
 
 
 
@@ -28,7 +30,9 @@ function App() {
           <Route path="/w_clothing" element={<Women_Clothing />} />
           <Route path="/w_accessories" element={<Women_Accessories />} /> 
           <Route path="/abbigliamento" element={<Abbigliamento />} />
-
+          <Route path="/vintage" element={<Vintage/>} /> 
+          <Route path="/customize" element={<Customize />} />  
+          <Route path="/men_Accessories" element={<Men_Accessories />} />
          </Routes>
          
          </BrowserRouter>
