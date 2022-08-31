@@ -37,12 +37,14 @@ function Catagories() {
         </Grid>
 
         <Grid item lg={6} md={6} xs={12}>   
+        <NavLink style={{textDecoration:"none"}} to="/women">
         <Card variant="outlined" className="card1" >
        
     </Card>
     <h3 className="heading" variant="h4" >
           Women
         </h3>
+        </NavLink>
         </Grid>
     </Grid>
     </div>
