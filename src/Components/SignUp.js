@@ -62,6 +62,7 @@ export default function SignUp() {
 
   var submit=(e)=>{
     e.preventDefault()
+    axios.post("https://fivrr1.herokuapp.com/userregistration",userdata).then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
     console.log(userdata)
     
   }

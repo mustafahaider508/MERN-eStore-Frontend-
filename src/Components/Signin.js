@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import axios from "axios"
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -47,7 +47,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
+  const [userdata, setuserdata] = useState({
+    email:"",
+    password:""
+  })
+
+  var changedata=(e)=>{
+    setuserdata({...userdata,[e.target.name]:e.target.value})
+  }
   const classes = useStyles();
+
+
+  var submit=(e)=>{
+    e.preventDefault()
+    axios.post("https://fivrr1.herokuapp.com/signin",userdata).then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
+    console.log(userdata)
+    
+  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -68,6 +84,8 @@ export default function SignIn() {
             id="email"
             label="Email Address"
             name="email"
+            value={userdata.email}
+            onChange={changedata}
             autoComplete="email"
             autoFocus
           />
@@ -77,8 +95,10 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Password"
-            type="password"
+            value={userdata.password}
+            onChange={changedata}
+            label="password"
+            type="Password"
             id="password"
             autoComplete="current-password"
           />
@@ -89,6 +109,7 @@ export default function SignIn() {
           <Button
             type="submit"
             fullWidth
+            onClick={submit}
             variant="contained"
             color="primary"
             className={classes.submit}
