@@ -13,14 +13,14 @@ function Home() {
     <>
        <Header />
        <Slider_home />
-      <Catagories />
+   <Catagories />
       <Product_Card />
       <BackgroundPic />
       <p className='specialOffer'>Special Offer</p>
     <h2 className='headingg1'>SPECIAL PRODUCTS</h2>
       <div className='dividerr'></div>
       <Product_Card />
-      <BeforeFooter />
+      <BeforeFooter />   
       
     </>
   )
