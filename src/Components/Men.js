@@ -66,7 +66,7 @@ const products = [
         img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
         cat:"women",
         title:"fitted dress",
-        price:"6473.00",
+        price:"6678.00",
       }
     
     
