@@ -13,7 +13,10 @@ import Abbigliamento from "./Components/Abbigliamento";
 import Vintage from './Components/Vintage';
 import Customize from './Components/Customize';
 import Men_necklaces_earrings from './Components/Men_ Bracelets_Rings';
-
+import W_Vintage from './Components/W_vintage';
+import W_customised from './Components/W_customised';
+import W_Bracelets_Rings from "./Components/W_Bracelets_Rings"
+import W_ER from "./Components/W_ER"
 
 
 function App() {
@@ -36,6 +39,10 @@ function App() {
           <Route path="/men_Accessories" element={<Men_Accessories />} />
           <Route path="/men_ne" element={<Men_necklaces_earrings />} /> 
           <Route path="/men_e" element={<Men_necklaces_earrings />} />
+          <Route path="/w_vintage" element={<W_Vintage />} /> 
+          <Route path="/w_customized" element={<W_customised/>} />
+          <Route path="/w_br" element={<W_Bracelets_Rings/>} />  
+          <Route path="/w_er" element={<W_ER/>} /> 
          </Routes>
          
          </BrowserRouter>

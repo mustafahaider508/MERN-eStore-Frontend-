@@ -67,13 +67,12 @@ const products = [
         img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
         cat:"women",
         title:"fitted dress",
-        price:"6473.00",
+        price:"6678.00",
       }
     
     
   
   ]
-
   const newProducts = [
     {
       img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
@@ -96,6 +95,7 @@ const products = [
     },
 
   ]
+
 
 
 const ExpandMore = styled((props) => {
@@ -126,7 +126,7 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function Women() {
+function W_Vintage() {
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
@@ -162,8 +162,8 @@ function Women() {
 
           
        
-          <h3>Women Collection</h3>
-          <h3>Home / Women Collection</h3>
+          <h3>Vintage Collection</h3>
+          <h3>Home / Women / Abbigliamento/ Vintage Collection</h3>
           </div>
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
@@ -289,6 +289,7 @@ function Women() {
      
 
     </Card>
+  
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
     {newProducts.map(i => {
@@ -305,37 +306,13 @@ function Women() {
         </>
       )
     })}
-      
-    
+
               </Grid>
               <Grid item xs={12} md={6} lg={9}> 
 
-              <Grid container>
-              <Grid item  xs={12} lg={6}>
-                  <NavLink style={{textDecoration:"none",color:"black"}} to="/w_clothing">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/Clothing-Store1--1-.jpg" />
 
-                </Card>
-                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
-              fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"uppercase" }}>abbigliamento</p>
-                </NavLink>
-               
-                </Grid>
-                <Grid item xs={12} lg={6}>
-                <NavLink style={{textDecoration:"none",color:"black"}} to="/w_accessories">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/polka-dot-summer-brown-dress-suede-wedge-sandals-eco-straw-tote-bag-picture-id1208148708?k=20&m=1208148708&s=612x612&w=0&h=rjZiAPCOpwREiTET21lTP3wM30BUqAG9PjocC-euJ98=" />
-
-                </Card>
-                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
-               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center" }}>ACCESSORI</p>
-                 </NavLink>
-                </Grid>
-
-              </Grid>
-
-             
+           
+                
                 
                 
               <Grid container spacing={2}>
@@ -343,7 +320,7 @@ function Women() {
           return (
             <>
             
-            <Grid item xs={6} md={6} lg={3} >
+            <Grid item xs={12} md={6} lg={3} >
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.img} />
@@ -395,4 +372,4 @@ function Women() {
   )
 }
 
-export default Women
+export default W_Vintage
