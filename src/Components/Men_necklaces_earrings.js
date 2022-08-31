@@ -126,7 +126,7 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function Men_Accessories() {
+function Men_necklaces_earrings() {
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
@@ -162,8 +162,8 @@ function Men_Accessories() {
 
           
        
-          <h3>Men Accessories Collection</h3>
-          <h3>Home / Men / Men Accessories Collection</h3>
+          <h3>Collane E Orecchini Collection</h3>
+          <h3>Home / Men / Accessories/ Collane E Orecchini Collection</h3>
           </div>
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
@@ -311,42 +311,7 @@ function Men_Accessories() {
               <Grid item xs={12} md={6} lg={9}> 
 
 
-              <Grid container spacing={3}>
-               
-                <Grid item  xs={12}   lg={4}>
-                  <NavLink style={{textDecoration:"none",color:"black"}} to="/vintage">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/27/25/74/2725743413e79678fcd7097edd497a1c.jpg" />
-
-                </Card>
-                <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
-              fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>Vintage</p>
-                </NavLink>
-               
-                </Grid>
-                <Grid item xs={12} lg={4}>
-                <NavLink style={{textDecoration:"none",color:"black"}} to="/men_ne">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2019-06-10-at-1-17-25-pm-1560187061.png?crop=0.668xw:0.472xh;0.204xw,0.215xh&resize=480:*" />
-
-                </Card>
-                <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
-               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>bracciali e anelli</p>
-                 </NavLink>
-                </Grid>
-                <Grid item  xs={12}   lg={4}>
-                  <NavLink style={{textDecoration:"none",color:"black"}} to="/men_e">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/550x/4d/71/cc/4d71cc91364275bb13bbc14047d1df78.jpg" />
-
-                </Card>
-                <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
-              fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>collane e orecchini</p>
-                </NavLink>
-               
-                </Grid>
-               
-              </Grid>
+           
                 
                 
                 
@@ -407,4 +372,4 @@ function Men_Accessories() {
   )
 }
 
-export default Men_Accessories
+export default Men_necklaces_earrings
