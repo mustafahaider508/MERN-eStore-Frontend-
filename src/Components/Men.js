@@ -18,6 +18,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Product_Card from './Product_Card';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
+import { NavLink } from 'react-router-dom';
 
 const products = [
     {
@@ -72,6 +73,29 @@ const products = [
     
   
   ]
+  const newProducts = [
+    {
+      img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
+      cat:"women",
+      title:"fitted dress",
+      price:"6473.00",
+    },
+    {
+      img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
+        cat:"women",
+        title:"belted Dress",
+        price:"6882.00",
+
+    },
+    {
+      img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
+      cat:"women",
+      title:"trim Dress",
+      price:"5394.00"
+    },
+
+  ]
+
 
 
 const ExpandMore = styled((props) => {
