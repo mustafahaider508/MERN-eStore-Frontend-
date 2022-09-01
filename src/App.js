@@ -17,6 +17,7 @@ import W_Vintage from './Components/W_vintage';
 import W_customised from './Components/W_customised';
 import W_Bracelets_Rings from "./Components/W_Bracelets_Rings"
 import W_ER from "./Components/W_ER"
+import Product_Detail from './Components/Product_Detail';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/w_customized" element={<W_customised/>} />
           <Route path="/w_br" element={<W_Bracelets_Rings/>} />  
           <Route path="/w_er" element={<W_ER/>} /> 
+          <Route path="/product_detail" element={<Product_Detail />} /> 
          </Routes>
          
          </BrowserRouter>
