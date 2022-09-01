@@ -3,6 +3,7 @@ import { Container } from '@mui/system'
 import React from 'react'
 import {faBullhorn, faClockFour, faPhone, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import "./BeforeFooter.css";
 
 function BeforeFooter() {
   return (
@@ -11,7 +12,7 @@ function BeforeFooter() {
             <Divider />
             <Grid container style={{paddingTop:"50px",paddingBottom:"50px"}}>
                 <Grid item lg={4}>
-                    <div style={{display:"flex",alignItems:"center",justifyContent:"center",borderRight:"1px solid #999"}}>
+                    <div  style={{display:"flex",alignItems:"center",justifyContent:"center",borderRight:"1px solid #999"}}>
                     <FontAwesomeIcon style={{fontSize:"45px",alignSelf:"center",paddingRight:"10px",color:"orangered" }} icon={faTruckFast} /> 
                         <div style={{flexDirection:"column",alignItems:"center"}}>
                         <h4 style={{fontSize:"20px",lineHeight:"2"}}>FREE SHIPPING</h4>
@@ -22,7 +23,7 @@ function BeforeFooter() {
 
                 </Grid>
                 <Grid item lg={4}>
-                    <div style={{display:"flex",alignItems:"center",justifyContent:"center",borderRight:"1px solid #999" }}>
+                    <div  style={{display:"flex",alignItems:"center",justifyContent:"center",borderRight:"1px solid #999" }}>
                     <FontAwesomeIcon style={{fontSize:"45px",alignSelf:"center",paddingRight:"10px",color:"orangered" }} icon={faClockFour} /> 
                         <div style={{flexDirection:"column",alignItems:"center"}}>
                         <h4 style={{fontSize:"20px",lineHeight:"2"}}>24 X 7 SERVICE</h4>
@@ -46,8 +47,10 @@ function BeforeFooter() {
                 
 
             </Grid>
-            <Divider />
+     
         </Container>
+        <Divider style={{backgroundColor:"orangered",height:"2px"}}/>
+      
       
       
     </div>

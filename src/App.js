@@ -18,6 +18,7 @@ import W_customised from './Components/W_customised';
 import W_Bracelets_Rings from "./Components/W_Bracelets_Rings"
 import W_ER from "./Components/W_ER"
 import Product_Detail from './Components/Product_Detail';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -45,7 +46,11 @@ function App() {
           <Route path="/w_br" element={<W_Bracelets_Rings/>} />  
           <Route path="/w_er" element={<W_ER/>} /> 
           <Route path="/product_detail" element={<Product_Detail />} /> 
+          
+         
+      
          </Routes>
+         <Footer />
          
          </BrowserRouter>
     

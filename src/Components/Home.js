@@ -7,6 +7,7 @@ import Product_Card from './Product_Card';
 import BackgroundPic from './BackgroundPic';
 import "./Catagories.css"
 import BeforeFooter from './BeforeFooter';
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <div className='dividerr'></div>
       <Product_Card />
       <BeforeFooter />   
+ 
       
     </>
   )
