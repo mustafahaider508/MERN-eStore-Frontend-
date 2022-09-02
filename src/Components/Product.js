@@ -13,8 +13,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import axios from "axios";
 
-
-
 export default function Product() {
     const [products,setproducts] = React.useState({
         catagory:"",
