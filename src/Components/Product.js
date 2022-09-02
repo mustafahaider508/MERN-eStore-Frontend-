@@ -34,7 +34,7 @@ const [file, setfile] = React.useState()
     const data=new FormData();
 data.append("name",products)
 data.append("productimage",file)
-    axios.post("http://localhost:5000/products",data)
+    axios.post("https://fivrr1.herokuapp.com/products",data)
     .then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
     console.log(products);
     
