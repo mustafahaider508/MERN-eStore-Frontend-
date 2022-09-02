@@ -19,6 +19,9 @@ import W_Bracelets_Rings from "./Components/W_Bracelets_Rings"
 import W_ER from "./Components/W_ER"
 import Product_Detail from './Components/Product_Detail';
 import Footer from './Components/Footer';
+import Dashboard from './Components/Dashboard';
+import Product from './Components/Product';
+import Veiw_products from './Components/Veiw_products';
 
 
 function App() {
@@ -26,6 +29,7 @@ function App() {
     <div className="App">
          <BrowserRouter>
          <Routes>
+       
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/signin" element={<SignIn/>} />
@@ -46,6 +50,9 @@ function App() {
           <Route path="/w_br" element={<W_Bracelets_Rings/>} />  
           <Route path="/w_er" element={<W_ER/>} /> 
           <Route path="/product_detail" element={<Product_Detail />} /> 
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/product" element={<Product/>} />
+          <Route path="/veiw_products" element={<Veiw_products/>} /> 
           
          
       

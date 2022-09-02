@@ -1,0 +1,41 @@
+.link{
+    text-decoration: none;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+ 
+}
+.active{
+    color: orangered;
+}
+img{
+    padding-top: 30px;
+    width: 180px;
+    margin: 0 auto;
+    display: block;
+  
+}
+h5{
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 24px;
+    font-size: 18px;
+    color: #222;
+    letter-spacing: .05em;
+    text-align: center;
+}
+h6{
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 24px;
+    font-size: 15px;
+    color: #777;
+    letter-spacing: .05em;
+    text-align: center;
+   
+
+}

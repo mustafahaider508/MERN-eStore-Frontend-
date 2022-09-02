@@ -62,7 +62,7 @@ function Product_Card() {
          title:i.title,
          description:i.description,
          price:i.price,
-         image:i.productimage,
+         image:i.productimage[0],
       
         
       }));
