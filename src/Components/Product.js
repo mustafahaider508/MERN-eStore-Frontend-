@@ -15,23 +15,15 @@ import axios from "axios";
 
 export default function Product() {
     const [products,setproducts] = React.useState({
-        catagory:"",
-        subcatagory:"",
+        category:"",
+        subcategory:"",
         title:"",
         price:"",
         description:"",
-        productimage:"",
 })
 
-    const [catagory, setCatagory] = React.useState('');
-    const [subcatagory, setSubcatagory] = React.useState('');
+const [file, setfile] = React.useState()
 
-  const handleChange = (event) => {
-    setCatagory(event.target.value);
-  };
-  const handleChange1 = (event) => {
-    setSubcatagory(event.target.value);
-  };
 
   var changedata=(e)=>{
     setproducts({...products,[e.target.name]:e.target.value})
@@ -39,7 +31,10 @@ export default function Product() {
 
   var submit=(e)=>{
     e.preventDefault()
-    axios.post("https://fivrr1.herokuapp.com/products",products)
+    const data=new FormData();
+data.append("name",products)
+data.append("productimage",file)
+    axios.post("http://localhost:5000/products",data)
     .then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
     console.log(products);
     
@@ -104,12 +99,13 @@ export default function Product() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={catagory}
+          value={products.category}
           label="catagory"
-          onChange={handleChange}
+          name="category"
+          onChange={changedata}
         >
-          <MenuItem value={10}>Men</MenuItem>
-          <MenuItem value={20}>Women</MenuItem>
+          <MenuItem value={"men"}>Men</MenuItem>
+          <MenuItem value={"women"}>Women</MenuItem>
         </Select>
       </FormControl>
 
@@ -121,15 +117,16 @@ export default function Product() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={subcatagory}
+          value={products.subcategory}
+          name="subcategory"
           label="Age"
-          onChange={handleChange1}
+          onChange={changedata}
         >
-          <MenuItem value={10}>Abbigliamento</MenuItem>
-          <MenuItem value={20}>Vintage</MenuItem>
-          <MenuItem value={30}>Customized</MenuItem>
-          <MenuItem value={40}>bracciali e anelli</MenuItem> 
-          <MenuItem value={50}>collane e orecchini</MenuItem>
+          <MenuItem value={"Abbigliamento"}>Abbigliamento</MenuItem>
+          <MenuItem value={"Vintage"}>Vintage</MenuItem>
+          <MenuItem value={"Customized"}>Customized</MenuItem>
+          <MenuItem value={"bracciali e anelli"}>bracciali e anelli</MenuItem> 
+          <MenuItem value={"collane e orecchini"}>collane e orecchini</MenuItem>
 
 
         </Select>
@@ -162,7 +159,12 @@ export default function Product() {
             <Grid item lg={6}>
             <FormControl fullWidth sx={{ m: 1 }}>
             
-            <input onChange={changedata} value={products.productimage} type="file" name="productimage"   accept="image/*" />
+            <input   onChange={(e)=>{
+          const file=e.target.files[0]
+          setfile(file)
+          console.log(file)
+        }}
+         value={products.productimage} type="file" name="productimage"   accept="image/*" />
              </FormControl>
             </Grid>
             <Grid item lg={6}>
