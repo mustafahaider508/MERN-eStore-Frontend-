@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+  import {Link} from "react-router-dom";
 import "./App.css";
 
 function Dummy() {
@@ -33,9 +34,11 @@ function Dummy() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Register</MenuItem>
-        <MenuItem onClick={handleClose}>Login</MenuItem>
-        {/* <MenuItem onClick={handleClose}>Logout</MenuItem> */}
+        <MenuItem onClick={handleClose}>
+          <Link style={{textDecoration:"none",color:"black"}} to='/signin'>SignIn</Link> </MenuItem>
+        <MenuItem onClick={handleClose}>
+        <Link style={{textDecoration:"none",color:"black"}} to='/signup'>SignUp</Link> </MenuItem>
+       
       </Menu>
       
     </div>

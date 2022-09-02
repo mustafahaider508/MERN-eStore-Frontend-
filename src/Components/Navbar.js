@@ -53,8 +53,10 @@ function Navbar() {
                                 <ul className='nav-menu'>
                                   <li  ><NavLink className="link" style={{textDecoration:"none"}} to='/'>Home</NavLink></li>
                                     <li  ><NavLink className="link" to='/shop'>Shop</NavLink> </li>
-                                    <li ><NavLink className="link" to='/signin'>Signin</NavLink> </li>
-                                    <li ><NavLink className="link" to='/signup'>Signup</NavLink> </li>
+                                    <li  ><NavLink className="link" to='/about'>About</NavLink> </li>
+                                    <li  ><NavLink className="link" to='/contact'>Contact</NavLink> </li>
+                                    {/* <li ><NavLink className="link" to='/signin'>Signin</NavLink> </li>
+                                    <li ><NavLink className="link" to='/signup'>Signup</NavLink> </li> */}
                                     
 
                                 </ul>

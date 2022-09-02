@@ -12,22 +12,15 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import axios from "axios"
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import axios from "axios";
+import Header from "./Header";
+import "./Men.css";
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
+    marginBottom:"40px",
+    background:"#fff",
     marginTop: theme.spacing(8),
     display: 'flex',
     flexDirection: 'column',
@@ -38,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '100%', 
     marginTop: theme.spacing(1),
   },
   submit: {
@@ -66,8 +59,18 @@ export default function SignIn() {
   }
 
   return (
-    <Container component="main" maxWidth="xs">
-      <CssBaseline />
+    <>
+    <Header />
+  <div className='background_pic'>
+  
+
+          
+       
+  <h3>SignIn</h3>
+  <h3>Home / SignIn</h3>
+  </div>
+    <div style={{background:"#fff"}}>
+    <Container    maxWidth="xs">
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
@@ -106,7 +109,7 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Button
+          <Button style={{backgroundColor:"orangered"}}
             type="submit"
             fullWidth
             onClick={submit}
@@ -131,8 +134,10 @@ export default function SignIn() {
         </form>
       </div>
       <Box mt={8}>
-        <Copyright />
+        
       </Box>
     </Container>
+    </div>
+    </>
   );
 }
