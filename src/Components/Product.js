@@ -3,28 +3,24 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import { NavLink ,Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import "./Men.css";
 import "./Dashboard.css"
-import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import Button from '@mui/material/Button';
+import axios from "axios";
 
 
-const useStyles = makeStyles((theme) => ({
-    
-  }));
-  
+
+
 
 
 export default function Product() {
-    const classes = useStyles();
-    const [catagory, setCatagory] = React.useState('');
-    const [subcatagory, setSubcatagory] = React.useState('');
+     const [catagory, setCatagory] = React.useState('');
+     const [subcatagory, setSubcatagory] = React.useState('');
 
   const handleChange = (event) => {
     setCatagory(event.target.value);
@@ -32,6 +28,10 @@ export default function Product() {
   const handleChange1 = (event) => {
     setSubcatagory(event.target.value);
   };
+
+
+
+  
 
   return (
       <>
@@ -87,7 +87,7 @@ export default function Product() {
         <Grid container spacing={3}>
 
             <Grid item lg={6}>
-            <FormControl fullWidth>
+            <FormControl fullWidth sx={{ m: 1 }}>
         <InputLabel id="demo-simple-select-label">Select Catagory</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -104,7 +104,7 @@ export default function Product() {
             </Grid>
 
             <Grid item lg={6}>
-            <FormControl fullWidth>
+            <FormControl fullWidth sx={{ m: 1 }}>
         <InputLabel id="demo-simple-select-label">Select SubCatagory</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -142,13 +142,7 @@ export default function Product() {
             </Grid>
             <Grid item lg={12}>
             <FormControl fullWidth sx={{ m: 1 }}>
-            <TextField
-          id="outlined-multiline-static"
-          label="Description"
-          multiline
-          rows={3}
-          
-        />
+            <TextField id="outlined-multiline-static" label="Description" multiline rows={3} />
             
             </FormControl>
    
@@ -158,6 +152,12 @@ export default function Product() {
             
             <input type="file" id="img" name="img" accept="image/*" />
              </FormControl>
+            </Grid>
+            <Grid item lg={6}>
+           
+            
+            <button  style={{float:'right',border:"none",padding:"10px",width:"200px",backgroundColor:"orangered",color:"white"}}>Submit</button>
+               
             </Grid>
 
         </Grid>
