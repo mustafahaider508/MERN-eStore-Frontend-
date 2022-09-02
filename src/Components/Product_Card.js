@@ -11,35 +11,7 @@ import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import API from "./Api";
 
-const products = [
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/4.jpg",
-    cat:"women",
-    title:"Crop top",
-    price:"$50.00"
-  },
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-    cat:"women",
-    title:"trim Dress",
-    price:"5394.00"
-  },
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-    cat:"women",
-    title:"belted Dress",
-    price:"6882.00",
-  },
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-    cat:"women",
-    title:"fitted dress",
-    price:"6473.00",
-  }
-  
-  
 
-]
 
 function Product_Card() {
   const [value, setValue] = React.useState(4);
@@ -68,10 +40,6 @@ function Product_Card() {
       }));
 
       console.log(products);      
-      
-      // console.log(products.filter(product =>product.gender=="women"));
-      //SetProductData(products);
-
        SetProductData(products);
 
     

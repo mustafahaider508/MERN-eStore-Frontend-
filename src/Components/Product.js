@@ -15,12 +15,18 @@ import axios from "axios";
 
 
 
-
-
-
 export default function Product() {
-     const [catagory, setCatagory] = React.useState('');
-     const [subcatagory, setSubcatagory] = React.useState('');
+    const [products,setproducts] = React.useState({
+        catagory:"",
+        subcatagory:"",
+        title:"",
+        price:"",
+        description:"",
+        productimage:"",
+})
+
+    const [catagory, setCatagory] = React.useState('');
+    const [subcatagory, setSubcatagory] = React.useState('');
 
   const handleChange = (event) => {
     setCatagory(event.target.value);
@@ -29,9 +35,17 @@ export default function Product() {
     setSubcatagory(event.target.value);
   };
 
+  var changedata=(e)=>{
+    setproducts({...products,[e.target.name]:e.target.value})
+  }
 
-
-  
+  var submit=(e)=>{
+    e.preventDefault()
+    axios.post("https://fivrr1.herokuapp.com/products",products)
+    .then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
+    console.log(products);
+    
+  }
 
   return (
       <>
@@ -128,21 +142,21 @@ export default function Product() {
             
             <Grid item lg={6}>
             <FormControl fullWidth sx={{ m: 1 }}>
-            <TextField maxWidth="" id="standard-basic" label="Title" variant="outlined"/>
+            <TextField  onChange={changedata} value={products.title}  name="title" maxWidth="" id="standard-basic" label="Title" variant="outlined"/>
             
             </FormControl>
    
             </Grid>
             <Grid item lg={6}>
             <FormControl fullWidth sx={{ m: 1 }}>
-            <TextField maxWidth="" id="standard-basic" label="Price" variant="outlined" />
+            <TextField onChange={changedata} value={products.price} name="price" maxWidth="" id="standard-basic" label="Price" variant="outlined" />
             
             </FormControl>
    
             </Grid>
             <Grid item lg={12}>
             <FormControl fullWidth sx={{ m: 1 }}>
-            <TextField id="outlined-multiline-static" label="Description" multiline rows={3} />
+            <TextField onChange={changedata} value={products.description} name="description" id="outlined-multiline-static" label="Description" multiline rows={3} />
             
             </FormControl>
    
@@ -150,13 +164,13 @@ export default function Product() {
             <Grid item lg={6}>
             <FormControl fullWidth sx={{ m: 1 }}>
             
-            <input type="file" id="img" name="img" accept="image/*" />
+            <input onChange={changedata} value={products.productimage} type="file" name="productimage"   accept="image/*" />
              </FormControl>
             </Grid>
             <Grid item lg={6}>
            
             
-            <button  style={{float:'right',border:"none",padding:"10px",width:"200px",backgroundColor:"orangered",color:"white"}}>Submit</button>
+            <button  onClick={submit} style={{float:'right',border:"none",padding:"10px",width:"200px",backgroundColor:"orangered",color:"white"}}>Submit</button>
                
             </Grid>
 

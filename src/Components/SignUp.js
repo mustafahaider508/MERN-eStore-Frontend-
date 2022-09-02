@@ -97,7 +97,6 @@ export default function SignUp() {
                 variant="outlined"
                 required
                 onChange={changedata}
-
                 value={userdata.email}
                 fullWidth
                 id="email"
@@ -110,7 +109,6 @@ export default function SignUp() {
               <TextField
                 variant="outlined"
                 onChange={changedata}
-
                 required
                 fullWidth
                 value={userdata.password}
