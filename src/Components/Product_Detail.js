@@ -4,6 +4,7 @@ import Rating from '@mui/material/Rating';
 import API from "./Api"
 import "./Men.css"
 import { useParams } from 'react-router-dom';
+import ReactWhatsapp from 'react-whatsapp';
 
 
 const products = [
@@ -119,9 +120,12 @@ var randomdata=Math.floor(Math.random()*arr)
                  <Divider  />
                  <Divider />
                  </div>
-                <Link  style={{textDecoration:"none"}} href="" target="_blank" >
-                 <Button style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} variant="contained">Buy Now</Button>
-                 </Link>
+                 <ReactWhatsapp style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+923150969602" message={"Hey! I want to buy "+i.productimage+" Title="+i.title+" Price="+"$"+i.price} >
+                 Buy Now
+                 </ReactWhatsapp>
+               
+                
+             
                  <div style={{display:"flex",marginTop:"10px",}}>
                  <Divider  />
                  <Divider />
