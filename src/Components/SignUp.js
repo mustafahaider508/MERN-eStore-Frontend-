@@ -5,7 +5,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -13,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from "axios"
+import {Link} from "react-router-dom";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -48,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
 
+
   const [userdata, setuserdata] = useState({
     username:"",
     email:"",
@@ -63,7 +64,12 @@ export default function SignUp() {
   var submit=(e)=>{
     e.preventDefault()
     axios.post("https://fivrr1.herokuapp.com/userregistration",userdata).then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
-    console.log(userdata)
+    console.log(userdata);
+   
+
+    
+    
+
     
   }
   return (
@@ -121,6 +127,7 @@ export default function SignUp() {
             </Grid>
   
           </Grid>
+          <Link to='/signin'>
           <Button
             type="submit"
             fullWidth
@@ -131,11 +138,13 @@ export default function SignUp() {
           >
             Sign Up
           </Button>
+          </Link>
+          
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+           
                 Already have an account? Sign in
-              </Link>
+       
             </Grid>
           </Grid>
         </form>

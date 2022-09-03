@@ -53,7 +53,7 @@ function Product_Card() {
 
      
       <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women").map(i => {
+        {ProductData.slice(8,12).map(i => {
           return (
             <>
             
