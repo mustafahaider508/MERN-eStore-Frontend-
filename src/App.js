@@ -22,6 +22,8 @@ import Footer from './Components/Footer';
 import Dashboard from './Components/Dashboard';
 import Product from './Components/Product';
 import Veiw_products from './Components/Veiw_products';
+import About from './Components/About';
+import Contact from './Components/Contact';
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
        
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="/signin" element={<SignIn/>} />
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/men" element={<Men />} />
