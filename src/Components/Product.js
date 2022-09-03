@@ -76,11 +76,6 @@ console.log('Client',products);
     <h6>750 followers | 10 review</h6>
    <h6>mark.enderess@mail.com</h6>
    </div>
-    <h4 style={{paddingTop:"10px"}}>
-    <NavLink  className="link" to='/dashboard'>
-     Dashboard
-  </NavLink>
-    </h4>
     <h4>
     <NavLink className="link" to='/product'>
       Products
@@ -183,7 +178,7 @@ console.log('Client',products);
             <Grid item lg={6}>
            
             
-            <button  onClick={submit} style={{float:'right',border:"none",padding:"10px",width:"200px",backgroundColor:"orangered",color:"white"}}>Submit</button>
+            <button  onClick={submit} style={{float:'right',border:"none",padding:"10px",width:"200px",backgroundColor:"orangered",color:"white"}}>Add Product</button>
                
             </Grid>
 

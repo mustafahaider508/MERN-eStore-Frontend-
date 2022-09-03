@@ -27,14 +27,13 @@
     font-weight: 700;
    
 }
-.Button{
-  background: #ff4c3b;
-  width: 30%;
-  padding: 13px 0px;
-    color: #fff!important;
-    letter-spacing: .05em;
-    border: 2px solid #ff4c3b;
-    align-self: center;
+.Btn1{
+  background-color:"white";
+  color:"black";
+  border:"1px solid #fff";
+  padding:"8px";
+  width:"15%";
+  margin-top:"10px";
 }
 .carousel-caption {
   position: absolute;
@@ -65,7 +64,7 @@
     font-weight: 700;
    
 }
-.Button{
+.Btn1{
   font-size: 10px;
   padding: 5px 0px;
   width: 20%;
@@ -92,7 +91,7 @@
     font-weight: 700;
    
 }
-.Button{
+.Btn1{
   font-size: 13px;
   padding: 5px 0px;
   width: 20%;
@@ -115,15 +114,23 @@
     font-weight: 700;
    
 }
-.Button{
-  background: #ff4c3b;
-  width: 30%;
-  padding: 13px 0px;
-    color: #fff!important;
-    letter-spacing: .05em;
-    border: 2px solid #ff4c3b;
-    align-self: center;
+.Btn1{
+  background-color:white;
+  color:black;
+  border:1px solid white;
+  padding:10px;
+  width:15%;
+  margin-top:10px;
 }
+.Btn1:hover{
+  background-color:black;
+  color:white;
+  border:1px solid black;
+  padding:10px;
+  width:15%;
+  margin-top:10px;
+}
+
 .carousel-caption {
   position: absolute;
   bottom: 1.25rem;

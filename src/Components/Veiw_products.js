@@ -62,11 +62,6 @@ const [data, setdata] = useState([])
           <h6>750 followers | 10 review</h6>
          <h6>mark.enderess@mail.com</h6>
          </div>
-          <h4 style={{paddingTop:"10px"}}>
-          <NavLink  className="link" to='/dashboard'>
-           Dashboard
-        </NavLink>
-          </h4>
           <h4>
           <NavLink className="link" to='/product'>
             Products

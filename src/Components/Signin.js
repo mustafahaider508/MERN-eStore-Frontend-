@@ -57,7 +57,7 @@ export default function SignIn() {
     e.preventDefault()
     axios.post("https://fivrr1.herokuapp.com/signin",userdata).then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
     console.log(userdata);
-    Navigate("/dashboard");
+    Navigate("/product");
     // if(userdata.email === [...userdata].email){
     //   Navigate("/dashboard");
     // }else{

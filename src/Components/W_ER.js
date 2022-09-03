@@ -21,82 +21,6 @@ import Slider from '@mui/material/Slider';
 import { NavLink } from 'react-router-dom';
 import  API from './Api.js';
 
-const products = [
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/4.jpg",
-      cat:"women",
-      title:"Crop top",
-      price:"$50.00"
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-      cat:"women",
-      title:"trim Dress",
-      price:"5394.00"
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-      cat:"women",
-      title:"belted Dress",
-      price:"6882.00",
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-      cat:"women",
-      title:"fitted dress",
-      price:"6473.00",
-    },
-    {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/4.jpg",
-        cat:"women",
-        title:"Crop top",
-        price:"$50.00"
-      },
-      {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-        cat:"women",
-        title:"trim Dress",
-        price:"5394.00"
-      },
-      {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-        cat:"women",
-        title:"belted Dress",
-        price:"6882.00",
-      },
-      {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-        cat:"women",
-        title:"fitted dress",
-        price:"6678.00",
-      }
-    
-    
-  
-  ]
-  const newProducts = [
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-      cat:"women",
-      title:"fitted dress",
-      price:"6473.00",
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-        cat:"women",
-        title:"belted Dress",
-        price:"6882.00",
-
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-      cat:"women",
-      title:"trim Dress",
-      price:"5394.00"
-    },
-
-  ]
-
 
 
 const ExpandMore = styled((props) => {
@@ -159,26 +83,8 @@ function  W_ER() {
     fetch(`${API}/getproduct`)
     .then((response) => response.json())
     .then((data) => {
-    // console.log(data);
-
-
-     const products = data.map((i) =>(
-     
-
-      {
-        id:i._id,
-        category:i.category,
-         title:i.title,
-         description:i.description,
-         price:i.price,
-         image:i.productimage[0],
-         subcatagory:i.subcatagory,
-      
-        
-      }));
-
-      console.log(products);      
-       SetProductData(products);
+    // console.log(data);    
+       SetProductData(data);
 
     
     })
@@ -193,8 +99,8 @@ function  W_ER() {
 
           
        
-          <h3>Bracciali E Anelli Collection</h3>
-          <h3>Home / Men / Accessories/ Bracciali E Anelli  Collection</h3>
+          <h3>collane e orecchini Collection</h3>
+          <h3>Home / Men / Accessories/ collane e orecchini Collection</h3>
           </div>
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
@@ -323,11 +229,11 @@ function  W_ER() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="women" && i.subcatagory=="collane e orecchini").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.category=="women" && i.subcategory=="Collaneeorecchini").slice(0,4).map(i => {
       return (
         <>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.img} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
@@ -347,7 +253,7 @@ function  W_ER() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women" && i.subcatagory=="collane e orecchini").map(i => {
+        {ProductData.filter((i)=>i.category=="women" && i.subcategory=="Collaneeorecchini").map(i => {
           return (
             <>
             

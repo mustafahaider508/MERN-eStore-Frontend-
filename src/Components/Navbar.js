@@ -24,7 +24,7 @@ function Navbar() {
                     <div className='menu-left'>
                         <div className='navbar'>
                             <div className='brand-logo'>
-                            <img src={process.env.PUBLIC_URL + '/logo.png'} />
+                            <img  src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} />
 
                             </div>
 
