@@ -19,7 +19,7 @@ export default function Product() {
         subcategory:"",
         title:"",
         price:"",
-        description:"",
+        discription:"",
 })
 
 const [file, setfile] = React.useState()
@@ -32,11 +32,16 @@ const [file, setfile] = React.useState()
   var submit=(e)=>{
     e.preventDefault()
     const data=new FormData();
-data.append("name",products)
+// data.append("products",JSON.stringify(products))
 data.append("productimage",file)
+for(const key in products){
+     data.append(key,products[key])
+}
+// data.append("key","value")
+console.log('Client',products);
+
     axios.post("https://fivrr1.herokuapp.com/products",data)
     .then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
-    console.log(products);
     
   }
 
@@ -151,14 +156,13 @@ data.append("productimage",file)
             </Grid>
             <Grid item lg={12}>
             <FormControl fullWidth sx={{ m: 1 }}>
-            <TextField onChange={changedata} value={products.description} name="description" id="outlined-multiline-static" label="Description" multiline rows={3} />
+            <TextField onChange={changedata} value={products.discription} name="discription" id="outlined-multiline-static" label="Description"  rows={3} />
             
             </FormControl>
    
             </Grid>
             <Grid item lg={6}>
-            <FormControl fullWidth sx={{ m: 1 }}>
-            
+            <FormControl fullWidth sx={{ m: 1 }}>           
             <input   onChange={(e)=>{
           const file=e.target.files[0]
           setfile(file)
@@ -192,3 +196,4 @@ data.append("productimage",file)
   );
 }
 
+;

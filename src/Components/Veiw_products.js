@@ -1,4 +1,4 @@
-import * as React from 'react';
+import react,{useEffect,useState} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
@@ -15,12 +15,24 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import axios from 'axios';
 
 
   
 
 export default function Veiw_products() {
  
+const [data, setdata] = useState([])
+  useEffect(()=>{
+        axios.get("https://fivrr1.herokuapp.com/getproduct").then((res)=>{setdata(res.data);console.log(res.data)})
+  },[data])  
+
+
+  const deletee=(id)=>{
+    console.log(id)
+          axios.post(`https://fivrr1.herokuapp.com/delete/${id}`).then((res)=>{console.log(res.data)})
+ 
+        } 
 
   return (
       <>
@@ -28,7 +40,7 @@ export default function Veiw_products() {
 <div className='background_pic'>
   
 
-          
+        
        
   <h3>View Products </h3>
   <h3>Shop / View Products</h3>
@@ -90,23 +102,30 @@ export default function Veiw_products() {
           </TableRow>
         </TableHead>
         <TableBody>
-         
-            <TableRow>
-           
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">title</TableCell>
-              <TableCell align="left">
-                  <EditIcon style={{color:"blue",marginRight:"10px",cursor:"pointer"}} />
-                  <DeleteIcon  style={{color:"red",cursor:"pointer"}}/>
+       {
+        data.map((i)=>{
 
-              </TableCell>
-              
-            </TableRow>
+          return(
+          <TableRow>
+           
+          <TableCell align="left">{i._id}</TableCell>
+          <TableCell align="left">{i.productimage}</TableCell>
+          <TableCell align="left">{i.category}</TableCell>
+          <TableCell align="left">{i.subcategory}</TableCell>
+          <TableCell align="left">{i.title}</TableCell>
+          <TableCell align="left">{i.price}</TableCell>
+          <TableCell align="left">{i.discription}</TableCell>
+          <TableCell align="left">
+              <EditIcon style={{color:"blue",marginRight:"10px",cursor:"pointer"}} />
+              <DeleteIcon onClick={()=>{deletee(i._id)}}  style={{color:"red",cursor:"pointer"}}/>
+
+          </TableCell>
+          
+        </TableRow>
+
+) })
+       }
+            
         
         </TableBody>
       </Table>
