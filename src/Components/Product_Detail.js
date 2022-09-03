@@ -67,6 +67,11 @@ function Product_Detail() {
      })
    },[proid]);
 
+   var apidata=filterdata.filter(x1 => x1.category == ProductData[0].category && x1.subcategory==ProductData[0].subcategory );
+    // console.log(apidata.length)
+var arr=apidata.length-5;
+var randomdata=Math.floor(Math.random()*arr)
+
   return (
     <div>
       <div className='background_pic'>
@@ -145,14 +150,14 @@ function Product_Detail() {
                   <Container style={{padding:"40px"}}>
 
                  <Grid container spacing={2}>
-        {products.map(i => {
+        {apidata.slice(randomdata,randomdata+4).map(i => {
           return (
             <>
             
             <Grid item xs={6} md={6} lg={3} >
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
-          <CardMedia style={{height:"60vh"}} image={i.img} />
+          <CardMedia style={{height:"60vh"}} image={i.productimage} />
           
           <CardContent>
       <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly />
