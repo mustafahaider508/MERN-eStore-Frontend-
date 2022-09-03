@@ -53,11 +53,11 @@ function Product_Card() {
 
      
       <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women").map(i => {
+        {ProductData.slice(8,12).map(i => {
           return (
             <>
             
-            <Grid item xs={12} md={6} lg={3} >
+            <Grid item xs={6} md={6} lg={3} >
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.image} />

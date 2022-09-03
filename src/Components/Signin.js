@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import axios from "axios";
 import Header from "./Header";
 import "./Men.css";
+import { useNavigate } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignIn() {
+  const Navigate = useNavigate();
   const [userdata, setuserdata] = useState({
     email:"",
     password:""
@@ -54,7 +56,14 @@ export default function SignIn() {
   var submit=(e)=>{
     e.preventDefault()
     axios.post("https://fivrr1.herokuapp.com/signin",userdata).then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
-    console.log(userdata)
+    console.log(userdata);
+    Navigate("/dashboard");
+    // if(userdata.email === [...userdata].email){
+    //   Navigate("/dashboard");
+    // }else{
+    //   console.log("error");
+    // }
+
     
   }
 

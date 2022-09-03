@@ -1,5 +1,5 @@
 import { Grid,Container } from '@mui/material';
-import React from 'react'
+import React,{useState,useEffect}  from 'react'
 import Header from './Header'
 import "./Men.css";
 import { styled } from '@mui/material/styles';
@@ -19,6 +19,7 @@ import Product_Card from './Product_Card';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
 import { NavLink } from 'react-router-dom';
+import  API from './Api.js';
 
 const products = [
     {
@@ -127,6 +128,7 @@ const ExpandMore = styled((props) => {
   
 
 function W_Vintage() {
+  const[ProductData,SetProductData] = useState([]);
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
@@ -152,7 +154,34 @@ function W_Vintage() {
   const handleChange = (event, newValue) => {
     setValuee(newValue);
   };
+  useEffect(() =>{
+    fetch(`${API}/getproduct`)
+    .then((response) => response.json())
+    .then((data) => {
+    // console.log(data);
 
+
+     const products = data.map((i) =>(
+     
+
+      {
+        id:i._id,
+        category:i.category,
+         title:i.title,
+         description:i.description,
+         price:i.price,
+         image:i.productimage[0],
+         subcatagory:i.subcatagory,
+      
+        
+      }));
+
+      console.log(products);      
+       SetProductData(products);
+
+    
+    })
+  },[]);
   return (
     <div>
       <Header />
@@ -292,11 +321,11 @@ function W_Vintage() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {newProducts.map(i => {
+    {ProductData.filter((i)=>i.category=="women" && i.subcatagory=="Vintage").slice(0,2).map(i => {
       return (
         <>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px"}} src={i.img} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.img} />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
@@ -316,7 +345,7 @@ function W_Vintage() {
                 
                 
               <Grid container spacing={2}>
-        {products.map(i => {
+        {ProductData.filter((i)=>i.category=="women" && i.subcatagory=="Vintage").map(i => {
           return (
             <>
             
