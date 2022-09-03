@@ -5,38 +5,8 @@ import API from "./Api"
 import "./Men.css"
 import { useParams } from 'react-router-dom';
 import ReactWhatsapp from 'react-whatsapp';
+import Header from './Header';
 
-
-const products = [
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/4.jpg",
-    cat:"women",
-    title:"Crop top",
-    price:"$50.00"
-  },
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-    cat:"women",
-    title:"trim Dress",
-    price:"5394.00"
-  },
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-    cat:"women",
-    title:"belted Dress",
-    price:"6882.00",
-  },
-  {
-    img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-    cat:"women",
-    title:"fitted dress",
-    price:"6473.00",
-  },
-  
-  
-  
-
-]
 
 
 function Product_Detail() {
@@ -75,6 +45,7 @@ var randomdata=Math.floor(Math.random()*arr)
 
   return (
     <div>
+      <Header />
       <div className='background_pic'>
   
 
@@ -120,7 +91,7 @@ var randomdata=Math.floor(Math.random()*arr)
                  <Divider  />
                  <Divider />
                  </div>
-                 <ReactWhatsapp style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+923150969602" message={"Hey! I want to buy "+i.productimage+" Title="+i.title+" Price="+"$"+i.price} >
+                 <ReactWhatsapp style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+393664275077" message={"Hey! I want to buy "+i.productimage+" Title="+i.title+" Price="+"$"+i.price} >
                  Buy Now
                  </ReactWhatsapp>
                

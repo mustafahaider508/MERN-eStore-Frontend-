@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import Slider_home from './Slider_home';
 import Catagories from './Catagories';
 import Product_Card from './Product_Card';
+import Product_Card2 from './Product_Card2';
 import BackgroundPic from './BackgroundPic';
 import "./Catagories.css"
 import BeforeFooter from './BeforeFooter';
@@ -20,7 +21,7 @@ function Home() {
       <p className='specialOffer'>Special Offer</p>
     <h2 className='headingg1'>SPECIAL PRODUCTS</h2>
       <div className='dividerr'></div>
-      <Product_Card />
+      <Product_Card2 />
       <BeforeFooter />   
  
       

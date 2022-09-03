@@ -4,21 +4,17 @@ import Header from './Header'
 import "./Men.css";
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Product_Card from './Product_Card';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import  API from './Api.js';
 
 
@@ -57,7 +53,7 @@ function Women() {
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -234,14 +230,17 @@ function Women() {
     {ProductData.filter((i)=>i.category=="women").slice(0,2).map(i => {
       return (
         <>
+        <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
             <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
             <div style={{paddingLeft:"0px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
-                <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
+                <p style={{fontWeight:600,lineHeight:"0",color:"black"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
+      
         </>
       )
     })}
@@ -284,6 +283,7 @@ function Women() {
             <>
             
             <Grid item xs={6} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -303,6 +303,7 @@ function Women() {
         </CardActionArea>
         
       </Card>
+      </Link>
 
           </Grid>
          
