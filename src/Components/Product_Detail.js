@@ -3,6 +3,7 @@ import {Grid,Typography,Container,Card,CardMedia,Divider,Button , Link,CardActio
 import Rating from '@mui/material/Rating';
 import API from "./Api"
 import "./Men.css"
+import { useParams } from 'react-router-dom';
 
 
 const products = [
@@ -41,6 +42,7 @@ function Product_Detail() {
   const[ProductData,SetProductData] = useState([]);
   const [filterdata, Setfilterdata] = useState([]);
   const [value, setValue] = React.useState(4);
+  const proid = useParams();
 
 
   useEffect( () =>{
@@ -49,11 +51,9 @@ function Product_Detail() {
      .then((data) => {
       console.log(data);
 
-
-
-      //  SetProductData(data.filter(x => x._id == proid.id));
-      //   Setfilterdata(data);
-      //   console.log(filterdata);
+       SetProductData(data.filter(x => x._id == proid.id));
+        Setfilterdata(data);
+        console.log(filterdata);
      
     
  
@@ -65,7 +65,7 @@ function Product_Detail() {
 
      
      })
-   },[]);
+   },[proid]);
 
   return (
     <div>
@@ -79,32 +79,35 @@ function Product_Detail() {
   </div>
       <Container style={{marginTop:"15px"}}>
       <Grid container>
+      {ProductData.map(i => {
+          return (
+            <>
           <Grid xs={12} lg={6}> 
           <Card variant='outlined' style={{ maxWidth: 570}}>
 
         <CardMedia 
-         style={{height:"100vh"}}
+         style={{height:"100vh",padding:0,margin:0}}
           component="img"
           alt="Contemplative Reptile"
-          height="140"
-          image="https://multikart-react.vercel.app/assets/images/pro3/25.jpg"
+          image={i.productimage}
           title=""
         />
         
     </Card>
          </Grid>
+         
          <Grid xs={12} md={6} lg={6}>
                  <div>
-                <Typography  varient="p" style={{color: "#222529",fontSize: "2.4rem",fontWeight: 600,letterSpacing: "0rem",}} >TRIM DRESS</Typography>
+                <Typography  varient="p" style={{color: "#222529",fontSize: "2.4rem",fontWeight: 600,letterSpacing: "0rem",}} >{i.title}</Typography>
                 <Typography  varient="body1" style={{backgroundColor:"green",fontSize:"12px", color:"white",width:"15%",textAlign:"center",borderRadius:"12px",padding:"4px",}}>available</Typography>
                 <Divider style={{width:"20%",background:"#e7e7e7",border:"1px solid ", marginTop:"15px",}} />
 
-                 <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1.5rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>$87.00</Typography>
+                 <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1.5rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>$ {i.price}</Typography>
                  <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>Product Description</Typography>
-                 <Typography  varient="body1" style={{color:"#777",marginTop:"20px",fontSize: "1.1rem",}}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</Typography>
+                 <Typography  varient="body1" style={{color:"#777",marginTop:"20px",fontSize: "1.1rem",}}>{i.discription}</Typography>
                  <div style={{  display:"flex",marginTop:"30px",}}> 
                  <Typography style={{fontSize:"15px", color:"#777",textTransform:"uppercase",}}>Catagory :</Typography>
-                 <Typography style={{fontSize:"15px",fontWeight:700,paddingLeft:"10px",textTransform:"uppercase",}}>women</Typography>
+                 <Typography style={{fontSize:"15px",fontWeight:700,paddingLeft:"10px",textTransform:"uppercase",}}>{i.category}</Typography>
                  </div>
                 
                  <div style={{marginTop:"20px",}}>
@@ -123,6 +126,8 @@ function Product_Detail() {
                 </div>
 
              </Grid>
+             </>
+             )})}
       </Grid>
       </Container>
 
@@ -137,7 +142,7 @@ function Product_Detail() {
                  <Divider />
                  </div>
 
-                 <Container style={{padding:"40px"}}>
+                  <Container style={{padding:"40px"}}>
 
                  <Grid container spacing={2}>
         {products.map(i => {
@@ -180,12 +185,13 @@ function Product_Detail() {
 
 
                  </Container>
+              
 
 
 
 
                  </div>
-      </Container>
+      </Container> 
       
     </div>
   )

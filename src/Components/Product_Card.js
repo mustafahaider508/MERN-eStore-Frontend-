@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 
@@ -38,6 +39,7 @@ function Product_Card() {
             <>
             
             <Grid item xs={6} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -57,8 +59,9 @@ function Product_Card() {
         </CardActionArea>
         
       </Card>
-
+      </Link>
           </Grid>
+         
          
             
             </>

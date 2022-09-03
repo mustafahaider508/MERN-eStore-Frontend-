@@ -5,6 +5,7 @@ import { faCoffee, faHeart, faPhone, faUser } from '@fortawesome/free-solid-svg-
 import Dummy from '../Dummy';
 import Navbar from './Navbar';
 import Hidden from '@mui/material/Hidden';
+import Mobnav from './Mobnav';
 
 
 
@@ -16,6 +17,11 @@ function Header() {
     
   return (
     <>
+
+    <Hidden smUp>
+        <Mobnav />
+
+    </Hidden>
    
    <Hidden smDown >
     <div className='top-header'>

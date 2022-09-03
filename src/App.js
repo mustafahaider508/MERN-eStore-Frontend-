@@ -24,6 +24,7 @@ import Product from './Components/Product';
 import Veiw_products from './Components/Veiw_products';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import Mobnav from './Components/Mobnav';
 
 
 function App() {
@@ -53,10 +54,11 @@ function App() {
           <Route path="/w_customized" element={<W_customised/>} />
           <Route path="/w_br" element={<W_Bracelets_Rings/>} />  
           <Route path="/w_er" element={<W_ER/>} /> 
-          <Route path="/product_detail" element={<Product_Detail />} /> 
+          <Route path="/product_detail/:id" element={<Product_Detail />} /> 
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/product" element={<Product/>} />
           <Route path="/veiw_products" element={<Veiw_products/>} /> 
+          <Route path="/mobnav" element={<Mobnav/>} /> 
           
          
       
