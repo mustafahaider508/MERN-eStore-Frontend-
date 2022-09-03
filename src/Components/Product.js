@@ -42,7 +42,15 @@ console.log('Client',products);
 
     axios.post("https://fivrr1.herokuapp.com/products",data)
     .then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
-    
+
+    alert("Product Added Successfully");
+    setproducts({
+      category:"",
+        subcategory:"",
+        title:"",
+        price:"",
+        discription:"",
+    });  
   }
 
   return (
@@ -130,8 +138,9 @@ console.log('Client',products);
           <MenuItem value={"Abbigliamento"}>Abbigliamento</MenuItem>
           <MenuItem value={"Vintage"}>Vintage</MenuItem>
           <MenuItem value={"Customized"}>Customized</MenuItem>
-          <MenuItem value={"bracciali e anelli"}>bracciali e anelli</MenuItem> 
-          <MenuItem value={"collane e orecchini"}>collane e orecchini</MenuItem>
+          <MenuItem value={"Accessories"}>Accessories</MenuItem>
+          <MenuItem value={"Braccialieanelli"}>Braccialieanelli</MenuItem> 
+          <MenuItem value={"Collaneeorecchini"}>Collaneeorecchini</MenuItem>
 
 
         </Select>

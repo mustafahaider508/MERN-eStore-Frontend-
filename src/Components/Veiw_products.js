@@ -24,7 +24,9 @@ export default function Veiw_products() {
  
 const [data, setdata] = useState([])
   useEffect(()=>{
-        axios.get("https://fivrr1.herokuapp.com/getproduct").then((res)=>{setdata(res.data);console.log(res.data)})
+        axios.get("https://fivrr1.herokuapp.com/getproduct")
+        .then((res)=>{setdata(res.data);
+        console.log(res.data)})
   },[data])  
 
 
@@ -91,14 +93,14 @@ const [data, setdata] = useState([])
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="left">id</TableCell>
-            <TableCell align="left">Productimage</TableCell>
-            <TableCell align="left">Catagory</TableCell>
-            <TableCell align="left">Subcatagory</TableCell>
-            <TableCell align="left">Title</TableCell>
-            <TableCell align="left">Price</TableCell>
-            <TableCell align="left"> Description</TableCell>
-            <TableCell align="left"> Action</TableCell>
+       
+            <TableCell style={{fontWeight:600}} align="left">Productimage</TableCell>
+            <TableCell style={{fontWeight:600}} align="left">Catagory</TableCell>
+            <TableCell style={{fontWeight:600}}align="left">Subcatagory</TableCell>
+            <TableCell style={{fontWeight:600}} align="left">Title</TableCell>
+            <TableCell style={{fontWeight:600}}  align="left">Price</TableCell>
+            <TableCell  style={{fontWeight:600}} align="left"> Description</TableCell>
+            <TableCell style={{fontWeight:600}} align="left"> Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -108,15 +110,16 @@ const [data, setdata] = useState([])
           return(
           <TableRow>
            
-          <TableCell align="left">{i._id}</TableCell>
-          <TableCell align="left">{i.productimage}</TableCell>
+         
+          <TableCell align="left">
+            <img style={{width:"50px",padding:0,margin:0}} src={i.productimage} />
+           </TableCell>
           <TableCell align="left">{i.category}</TableCell>
           <TableCell align="left">{i.subcategory}</TableCell>
           <TableCell align="left">{i.title}</TableCell>
           <TableCell align="left">{i.price}</TableCell>
-          <TableCell align="left">{i.discription}</TableCell>
+          <TableCell align="left">{i.discription.slice(0,10)}...</TableCell>
           <TableCell align="left">
-              <EditIcon style={{color:"blue",marginRight:"10px",cursor:"pointer"}} />
               <DeleteIcon onClick={()=>{deletee(i._id)}}  style={{color:"red",cursor:"pointer"}}/>
 
           </TableCell>

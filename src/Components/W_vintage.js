@@ -21,81 +21,7 @@ import Slider from '@mui/material/Slider';
 import { NavLink } from 'react-router-dom';
 import  API from './Api.js';
 
-const products = [
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/4.jpg",
-      cat:"women",
-      title:"Crop top",
-      price:"$50.00"
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-      cat:"women",
-      title:"trim Dress",
-      price:"5394.00"
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-      cat:"women",
-      title:"belted Dress",
-      price:"6882.00",
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-      cat:"women",
-      title:"fitted dress",
-      price:"6473.00",
-    },
-    {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/4.jpg",
-        cat:"women",
-        title:"Crop top",
-        price:"$50.00"
-      },
-      {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-        cat:"women",
-        title:"trim Dress",
-        price:"5394.00"
-      },
-      {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-        cat:"women",
-        title:"belted Dress",
-        price:"6882.00",
-      },
-      {
-        img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-        cat:"women",
-        title:"fitted dress",
-        price:"6678.00",
-      }
-    
-    
-  
-  ]
-  const newProducts = [
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/1.jpg",
-      cat:"women",
-      title:"fitted dress",
-      price:"6473.00",
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/3.jpg",
-        cat:"women",
-        title:"belted Dress",
-        price:"6882.00",
 
-    },
-    {
-      img:"https://multikart-react.vercel.app/assets/images/pro3/39.jpg",
-      cat:"women",
-      title:"trim Dress",
-      price:"5394.00"
-    },
-
-  ]
 
 
 
@@ -158,26 +84,8 @@ function W_Vintage() {
     fetch(`${API}/getproduct`)
     .then((response) => response.json())
     .then((data) => {
-    // console.log(data);
-
-
-     const products = data.map((i) =>(
-     
-
-      {
-        id:i._id,
-        category:i.category,
-         title:i.title,
-         description:i.description,
-         price:i.price,
-         image:i.productimage[0],
-         subcatagory:i.subcatagory,
-      
-        
-      }));
-
-      console.log(products);      
-       SetProductData(products);
+    // console.log(data);    
+       SetProductData(data);
 
     
     })
@@ -321,11 +229,11 @@ function W_Vintage() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="women" && i.subcatagory=="Vintage").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.subcategory=="Vintage" && i.category=="women").slice(0,2).map(i => {
       return (
         <>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.img} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
@@ -345,14 +253,14 @@ function W_Vintage() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women" && i.subcatagory=="Vintage").map(i => {
+        {ProductData.filter((i)=>i.subcategory=="Vintage" && i.category=="women").map(i => {
           return (
             <>
             
             <Grid item xs={12} md={6} lg={3} >
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
-          <CardMedia style={{height:"60vh"}} image={i.img} />
+          <CardMedia style={{height:"60vh"}} image={i.productimage} />
           
           <CardContent>
       <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly />

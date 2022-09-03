@@ -9,43 +9,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
-import API from "./Api";
+import axios from 'axios';
 
 
 
 function Product_Card() {
   const [value, setValue] = React.useState(4);
-  const[ProductData,SetProductData] = useState([]);
+  const[Data,setData] = useState([]);
 
 
-  useEffect(() =>{
-    fetch(`${API}/getproduct`)
-    .then((response) => response.json())
-    .then((data) => {
-    // console.log(data);
+  useEffect(()=>{
+    axios.get("https://fivrr1.herokuapp.com/getproduct")
+    .then((res)=>{setData(res.data);
+    console.log(res.data)})
+},[])  
 
-
-     const products = data.map((i) =>(
-     
-
-      {
-        id:i._id,
-        category:i.category,
-         title:i.title,
-         description:i.description,
-         price:i.price,
-         image:i.productimage[0],
-      
-        
-      }));
-
-      console.log(products);      
-       SetProductData(products);
-
-    
-    })
-  },[]);
-
+ 
+  console.log(Data.title);
 
   return (
     <>
@@ -53,14 +33,14 @@ function Product_Card() {
 
      
       <Grid container spacing={2}>
-        {ProductData.slice(8,12).map(i => {
+        {Data.slice(0,4).map(i => {
           return (
             <>
             
             <Grid item xs={6} md={6} lg={3} >
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
-          <CardMedia style={{height:"60vh"}} image={i.image} />
+          <CardMedia style={{height:"60vh"}} image={i.productimage} />
           
           <CardContent>
       <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly />
