@@ -93,7 +93,7 @@ var randomdata=Math.floor(Math.random()*arr);
                  <Divider  />
                  <Divider />
                  </div>
-                 <ReactWhatsapp style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+393664275077" message={"Hey! I want to buy "+i.productimage+" Title="+i.title+" Price="+"$"+i.price} >
+                 <ReactWhatsapp style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+393664275077" message={`Hey! I want to buy +${i.productimage} Title=${i.title} Price=${i.price}`} >
                  Buy Now
                  </ReactWhatsapp>
                
