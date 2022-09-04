@@ -4,21 +4,17 @@ import Header from './Header'
 import "./Men.css";
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Product_Card from './Product_Card';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import  API from './Api.js';
 
 
@@ -53,13 +49,13 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function Women_Accessories() {
+function WomenAccessories() {
   const[ProductData,SetProductData] = useState([]);
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -232,17 +228,19 @@ function Women_Accessories() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="women" && i.subcategory=="Accessories").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.category==="women" && i.subcategory==="Accessories").slice(0,2).map(i => {
       return (
         <>
-        <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+                <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
+        <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}}  >
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage}  alt=''/>
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
-                <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
+                <p style={{fontWeight:600,lineHeight:"0",color:"black"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -256,7 +254,7 @@ function Women_Accessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://static-01.daraz.pk/p/e0ceac5af3ebf6f01f26cc4907393c9d.jpg" />
+                <img  style={{width:"100%",height:"50vh"}} src="https://static-01.daraz.pk/p/e0ceac5af3ebf6f01f26cc4907393c9d.jpg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -267,7 +265,7 @@ function Women_Accessories() {
                 <Grid item xs={12} lg={4}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/w_br">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/736x/72/b9/03/72b903c22663b15d29fc003dbaf1f60d--trends--jewelry-trends.jpg" />
+                <img style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/736x/72/b9/03/72b903c22663b15d29fc003dbaf1f60d--trends--jewelry-trends.jpg" alt=''/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -277,7 +275,7 @@ function Women_Accessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_er">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://img.joomcdn.net/e9fd63a5b12570c86a1db887c1df87bf1ba44c84_original.jpeg" />
+                <img  style={{width:"100%",height:"50vh"}} src="https://img.joomcdn.net/e9fd63a5b12570c86a1db887c1df87bf1ba44c84_original.jpeg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -291,11 +289,12 @@ function Women_Accessories() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women" && i.subcategory=="Accessories").map(i => {
+        {ProductData.filter((i)=>i.category==="women" && i.subcategory==="Accessories").map(i => {
           return (
             <>
             
             <Grid item xs={12} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -315,6 +314,7 @@ function Women_Accessories() {
         </CardActionArea>
         
       </Card>
+      </Link>
 
           </Grid>
          
@@ -347,4 +347,4 @@ function Women_Accessories() {
   )
 }
 
-export default Women_Accessories
+export default WomenAccessories

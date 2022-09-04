@@ -52,7 +52,7 @@ function Shop() {
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -226,7 +226,7 @@ function Shop() {
       return (
         <>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt='' />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>

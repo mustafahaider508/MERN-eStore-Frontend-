@@ -4,21 +4,17 @@ import Header from './Header'
 import "./Men.css";
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Product_Card from './Product_Card';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import  API from './Api.js';
 
 
@@ -52,13 +48,13 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function Women_Clothing() {
+function WomenClothing() {
   const[ProductData,SetProductData] = useState([]);
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -230,17 +226,18 @@ function Women_Clothing() {
     </Card>
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.subcategory=="Abbigliamento" && i.category=="women").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.subcategory==="Abbigliamento" && i.category==="women").slice(0,2).map(i => {
       return (
-        <>
+        <>       <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt="" />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
-                <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
+                <p style={{fontWeight:600,lineHeight:"0",color:"black"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -253,7 +250,7 @@ function Women_Clothing() {
               <Grid item  xs={12} lg={6}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://static-01.daraz.pk/p/e0ceac5af3ebf6f01f26cc4907393c9d.jpg" />
+                <img style={{width:"100%",height:"50vh"}} src="https://static-01.daraz.pk/p/e0ceac5af3ebf6f01f26cc4907393c9d.jpg"  alt=""/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -264,7 +261,7 @@ function Women_Clothing() {
                 <Grid item xs={12} lg={6}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/w_customized">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpbqa5ru8Xz5U3JK5hnMyhRrdpxAlgJjE6KtnHtsVPqDfIKC1EeRAr50QD76sqU-Nd4D0&usqp=CAU" />
+                <img style={{width:"100%",height:"50vh"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpbqa5ru8Xz5U3JK5hnMyhRrdpxAlgJjE6KtnHtsVPqDfIKC1EeRAr50QD76sqU-Nd4D0&usqp=CAU" alt="" />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -278,11 +275,12 @@ function Women_Clothing() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.subcategory=="Abbigliamento" && i.category=="women").map(i => {
+        {ProductData.filter((i)=>i.subcategory==="Abbigliamento" && i.category==="women").map(i => {
           return (
             <>
             
             <Grid item xs={6} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -302,6 +300,8 @@ function Women_Clothing() {
         </CardActionArea>
         
       </Card>
+      </Link>
+      
 
           </Grid>
          
@@ -334,4 +334,4 @@ function Women_Clothing() {
   )
 }
 
-export default Women_Clothing
+export default WomenClothing

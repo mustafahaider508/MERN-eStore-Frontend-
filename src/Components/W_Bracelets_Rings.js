@@ -4,21 +4,17 @@ import Header from './Header'
 import "./Men.css";
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Product_Card from './Product_Card';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import  API from './Api.js';
 
 
@@ -50,13 +46,13 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function W_Bracelets_Rings() {
+function WBraceletsRings() {
   const[ProductData,SetProductData] = useState([]);
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -74,7 +70,7 @@ function W_Bracelets_Rings() {
 
   const [valuee, setValuee] = React.useState([0, 1000]);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = ( newValue) => {
     setValuee(newValue);
   };
 
@@ -228,17 +224,19 @@ function W_Bracelets_Rings() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="women" && i.subcategory=="Braccialieanelli").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.category==="women" && i.subcategory==="Braccialieanelli").slice(0,2).map(i => {
       return (
         <>
+                <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt="" />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
                 <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -252,11 +250,12 @@ function W_Bracelets_Rings() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women" && i.subcategory=="Braccialieanelli").map(i => {
+        {ProductData.filter((i)=>i.category==="women" && i.subcategory==="Braccialieanelli").map(i => {
           return (
             <>
             
             <Grid item xs={12} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -276,7 +275,7 @@ function W_Bracelets_Rings() {
         </CardActionArea>
         
       </Card>
-
+</Link>
           </Grid>
          
             
@@ -308,5 +307,5 @@ function W_Bracelets_Rings() {
   )
 }
 
-export default W_Bracelets_Rings
+export default WBraceletsRings
 

@@ -3,7 +3,7 @@ import 'react-slideshow-image/dist/styles.css';
 import "./Slider_home.css"
 import Carousel from 'react-bootstrap/Carousel';
 
-function Slider_home() {
+function Sliderhome() {
    
   return (
     <div>
@@ -45,5 +45,5 @@ function Slider_home() {
   )
 }
 
-export default Slider_home
+export default Sliderhome
 

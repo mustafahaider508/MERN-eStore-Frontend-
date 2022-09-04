@@ -1,4 +1,4 @@
-import react,{useEffect,useState} from 'react';
+import {useEffect,useState} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
@@ -13,14 +13,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from 'axios';
 
 
   
 
-export default function Veiw_products() {
+export default function Veiwproducts() {
  
 const [data, setdata] = useState([])
   useEffect(()=>{
@@ -57,7 +56,7 @@ const [data, setdata] = useState([])
           <Card style={{background:"#f8f8f8"}} variant='outlined' sx={{ maxWidth: 345 }}>
       <CardContent>
           <div style={{paddingBottom:"30px"}}>
-          <img src="logo.png" />
+          <img src="logo.png" alt='' />
           <h5>Fashion store</h5>
           <h6>750 followers | 10 review</h6>
          <h6>mark.enderess@mail.com</h6>
@@ -107,7 +106,7 @@ const [data, setdata] = useState([])
            
          
           <TableCell align="left">
-            <img style={{width:"50px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"50px",padding:0,margin:0}} src={i.productimage} alt=''/>
            </TableCell>
           <TableCell align="left">{i.category}</TableCell>
           <TableCell align="left">{i.subcategory}</TableCell>

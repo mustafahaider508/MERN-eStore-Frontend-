@@ -227,12 +227,12 @@ function Women() {
     </Card>
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="women").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.category==="women").slice(0,2).map(i => {
       return (
         <>
         <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt='' />
             <div style={{paddingLeft:"0px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
@@ -253,7 +253,7 @@ function Women() {
               <Grid item  xs={12} lg={6}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_clothing">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/Clothing-Store1--1-.jpg" />
+                <img style={{width:"100%",height:"50vh"}} src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/Clothing-Store1--1-.jpg" alt="" />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -264,7 +264,7 @@ function Women() {
                 <Grid item xs={12} lg={6}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/w_accessories">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/polka-dot-summer-brown-dress-suede-wedge-sandals-eco-straw-tote-bag-picture-id1208148708?k=20&m=1208148708&s=612x612&w=0&h=rjZiAPCOpwREiTET21lTP3wM30BUqAG9PjocC-euJ98=" />
+                <img style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/polka-dot-summer-brown-dress-suede-wedge-sandals-eco-straw-tote-bag-picture-id1208148708?k=20&m=1208148708&s=612x612&w=0&h=rjZiAPCOpwREiTET21lTP3wM30BUqAG9PjocC-euJ98=" alt=""/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -278,7 +278,7 @@ function Women() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="women").map(i => {
+        {ProductData.filter((i)=>i.category==="women").map(i => {
           return (
             <>
             
