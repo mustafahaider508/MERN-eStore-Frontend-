@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {Grid,Typography,Container,Card,CardMedia,Divider,Button , Link,CardActionArea,CardContent} from "@material-ui/core";
+import {Grid,Typography,Container,Card,CardMedia,Divider,CardActionArea,CardContent} from "@material-ui/core";
 import Rating from '@mui/material/Rating';
 import API from "./Api"
 import "./Men.css"
@@ -9,10 +9,10 @@ import Header from './Header';
 
 
 
-function Product_Detail() {
+function ProductDetail() {
   const[ProductData,SetProductData] = useState([]);
   const [filterdata, Setfilterdata] = useState([]);
-  const [value, setValue] = React.useState(4);
+  const [value] = React.useState(4);
   const proid = useParams();
 
 
@@ -22,9 +22,9 @@ function Product_Detail() {
      .then((data) => {
       console.log(data);
 
-       SetProductData(data.filter(x => x._id == proid.id));
+       SetProductData(data.filter(x => x._id === proid.id));
         Setfilterdata(data);
-        console.log(filterdata);
+        // console.log(filterdata);
      
     
  
@@ -38,10 +38,12 @@ function Product_Detail() {
      })
    },[proid]);
 
-   var apidata=filterdata.filter(x1 => x1.category == ProductData[0].category && x1.subcategory==ProductData[0].subcategory );
+   var apidata=filterdata.filter(x1 => x1.category === ProductData[0].category && x1.subcategory===ProductData[0].subcategory );
     // console.log(apidata.length)
 var arr=apidata.length-5;
-var randomdata=Math.floor(Math.random()*arr)
+var randomdata=Math.floor(Math.random()*arr);
+
+
 
   return (
     <div>
@@ -177,4 +179,4 @@ var randomdata=Math.floor(Math.random()*arr)
   )
 }
 
-export default Product_Detail
+export default ProductDetail

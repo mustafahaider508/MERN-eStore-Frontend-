@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import  API from './Api.js';
 
 
@@ -47,13 +47,13 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function Men_Accessories() {
+function MenAccessories() {
   const[ProductData,SetProductData] = useState([]);
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -225,17 +225,19 @@ function Men_Accessories() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="men" && i.subcategory=="Accessories").slice(0,2).map(i => {
+    {ProductData.filter((i)=>i.category==="men" && i.subcategory==="Accessories").slice(0,2).map(i => {
       return (
         <>
+        <Link>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt='' />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
                 <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -249,7 +251,7 @@ function Men_Accessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/27/25/74/2725743413e79678fcd7097edd497a1c.jpg" />
+                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/27/25/74/2725743413e79678fcd7097edd497a1c.jpg" alt=''/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -260,7 +262,7 @@ function Men_Accessories() {
                 <Grid item xs={12} lg={4}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/men_ne">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2019-06-10-at-1-17-25-pm-1560187061.png?crop=0.668xw:0.472xh;0.204xw,0.215xh&resize=480:*" />
+                <img style={{width:"100%",height:"50vh"}} src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2019-06-10-at-1-17-25-pm-1560187061.png?crop=0.668xw:0.472xh;0.204xw,0.215xh&resize=480:*" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -270,7 +272,7 @@ function Men_Accessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/men_e">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/550x/4d/71/cc/4d71cc91364275bb13bbc14047d1df78.jpg" />
+                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/550x/4d/71/cc/4d71cc91364275bb13bbc14047d1df78.jpg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -284,11 +286,12 @@ function Men_Accessories() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="men" && i.subcategory=="Accessories").map(i => {
+        {ProductData.filter((i)=>i.category==="men" && i.subcategory==="Accessories").map(i => {
           return (
             <>
             
             <Grid item xs={12} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -308,6 +311,7 @@ function Men_Accessories() {
         </CardActionArea>
         
       </Card>
+      </Link>
 
           </Grid>
          
@@ -340,4 +344,4 @@ function Men_Accessories() {
   )
 }
 
-export default Men_Accessories
+export default MenAccessories

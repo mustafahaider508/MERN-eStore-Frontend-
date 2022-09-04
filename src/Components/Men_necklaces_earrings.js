@@ -15,6 +15,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
 import  API from './Api.js';
+import {Link}  from "react-router-dom";
 
 
 const ExpandMore = styled((props) => {
@@ -45,7 +46,7 @@ const ExpandMore = styled((props) => {
   ];
   
 
-function Men_necklaces_earrings() {
+function MenNecklacesEarrings() {
   const[ProductData,SetProductData] = useState([])
     const [expanded, setExpanded] = React.useState(false);
     const [expanded1, setExpanded1] = React.useState(false);
@@ -225,6 +226,7 @@ function Men_necklaces_earrings() {
     {ProductData.filter((i)=>i.category=="men" && i.subcategory=="Collaneeorecchini").slice(0,2).map(i => {
       return (
         <>
+           <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
             <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
             <div style={{paddingLeft:"10px"}}>
@@ -233,6 +235,7 @@ function Men_necklaces_earrings() {
                 <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -251,6 +254,7 @@ function Men_necklaces_earrings() {
             <>
             
             <Grid item xs={12} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -270,6 +274,7 @@ function Men_necklaces_earrings() {
         </CardActionArea>
         
       </Card>
+      </Link>
 
           </Grid>
          
@@ -302,4 +307,4 @@ function Men_necklaces_earrings() {
   )
 }
 
-export default Men_necklaces_earrings
+export default MenNecklacesEarrings

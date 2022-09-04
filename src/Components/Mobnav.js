@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import CssBaseline from '@mui/material/CssBaseline';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -13,11 +12,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -85,7 +79,7 @@ export default function  Mobnav() {
       <AppBar variant='outlined' style={{backgroundColor:"white",color:'black'}} position="fixed" open={open}>
         <Toolbar>
           <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-          <img style={{padding:0,margin:0}} src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} />
+          <img style={{padding:0,margin:0}} src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} alt="" />
           </Typography>
           <IconButton
             color="inherit"
@@ -119,7 +113,7 @@ export default function  Mobnav() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <img  src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} />
+        <img  src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} alt="" />
         <List>
          <Link style={{textDecoration:"none",color:"black"}} to='/'><ListItem>Home</ListItem></Link> 
          <Link style={{textDecoration:"none",color:"black"}} to='/shop'><ListItem>Shop</ListItem></Link> 

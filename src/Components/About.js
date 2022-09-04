@@ -23,7 +23,7 @@ Ed è proprio da questa teoria che nasce il nostro concept store: dare nuova vit
                   </Grid>
 
                   <Grid item lg={6}>
-                  <img style={{width:"100%",height:"60vh"}} src="https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHw%3D&w=1000&q=80" />
+                  <img style={{width:"100%",height:"60vh"}} src="https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhpbmclMjBzdG9yZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt='' />
                   </Grid>
 
               </Grid>

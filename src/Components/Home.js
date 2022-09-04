@@ -1,27 +1,25 @@
 import React from 'react';
 import Header from './Header';
-import { Button } from '@mui/material';
-import Slider_home from './Slider_home';
+import Sliderhome from './Slider_home';
 import Catagories from './Catagories';
-import Product_Card from './Product_Card';
-import Product_Card2 from './Product_Card2';
+import ProductCard from './Product_Card';
+import ProductCard2 from './Product_Card2';
 import BackgroundPic from './BackgroundPic';
 import "./Catagories.css"
 import BeforeFooter from './BeforeFooter';
-import Footer from "./Footer";
 
 function Home() {
   return (
     <>
        <Header />
-       <Slider_home />
+       <Sliderhome />
    <Catagories />
-      <Product_Card />
+      <ProductCard />
       <BackgroundPic />
       <p className='specialOffer'>Special Offer</p>
     <h2 className='headingg1'>SPECIAL PRODUCTS</h2>
       <div className='dividerr'></div>
-      <Product_Card2 />
+      <ProductCard2 />
       <BeforeFooter />   
  
       

@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
  import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
-import { NavLink } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import  API from './Api.js';
 
 
@@ -52,7 +52,7 @@ function Men() {
     const [expanded1, setExpanded1] = React.useState(false);
     const [expanded2, setExpanded2] = React.useState(false);
     const [expanded3, setExpanded3] = React.useState(false);
-    const [value, setValue] = React.useState(4);
+    const [value] = React.useState(4);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -224,17 +224,19 @@ function Men() {
   
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
 
-    {ProductData.filter((i)=>i.category=="men").slice(0,3).map(i => {
+    {ProductData.filter((i)=>i.category==="men").slice(0,3).map(i => {
       return (
         <>
+                <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
-            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} />
+            <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt="" />
             <div style={{paddingLeft:"10px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
-                <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
+                <p style={{fontWeight:600,lineHeight:"0",color:"black"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -248,7 +250,7 @@ function Men() {
                 <Grid item  xs={12}   lg={6}>
                   <NavLink  style={{textDecoration:"none",color:"black"}} to="/abbigliamento">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/handsome-man-shopping-for-new-clothes-in-store-picture-id1189091313?k=20&m=1189091313&s=612x612&w=0&h=8zBj4HJMAaCLzmRKfoHvfMueqa7FFPA3zHttnoFnp9Y=" />
+                <img  style={{width:"100%",height:"50vh"}} src="https://media.istockphoto.com/photos/handsome-man-shopping-for-new-clothes-in-store-picture-id1189091313?k=20&m=1189091313&s=612x612&w=0&h=8zBj4HJMAaCLzmRKfoHvfMueqa7FFPA3zHttnoFnp9Y=" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -259,7 +261,7 @@ function Men() {
                 <Grid item xs={12} lg={6}>
                 <NavLink   style={{textDecoration:"none",color:"black"}} to="/men_Accessories">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="men ass.jpeg" />
+                <img style={{width:"100%",height:"50vh"}} src="men ass.jpeg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -272,11 +274,12 @@ function Men() {
                 
                 
               <Grid container spacing={2}>
-        {ProductData.filter((i)=>i.category=="men").map(i => {
+        {ProductData.filter((i)=>i.category==="men").map(i => {
           return (
             <>
             
             <Grid item xs={12} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -296,7 +299,7 @@ function Men() {
         </CardActionArea>
         
       </Card>
-
+</Link>
           </Grid>
          
             

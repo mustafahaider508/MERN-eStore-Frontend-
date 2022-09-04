@@ -1,10 +1,4 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import "./Navbar.css";
 import { Hidden } from '@mui/material';
 import { NavLink } from 'react-router-dom';
@@ -24,7 +18,7 @@ function Navbar() {
                     <div className='menu-left'>
                         <div className='navbar'>
                             <div className='brand-logo'>
-                            <img  src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} />
+                            <img  src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} alt='' />
 
                             </div>
 

@@ -1,7 +1,7 @@
 import { Divider, Grid } from '@mui/material'
 import { Container } from '@mui/system'
 import React from 'react'
-import {faBullhorn, faClockFour, faPhone, faTruckFast } from '@fortawesome/free-solid-svg-icons';
+import {faBullhorn, faClockFour, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./BeforeFooter.css";
 

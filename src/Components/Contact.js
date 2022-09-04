@@ -1,9 +1,9 @@
-import { Container ,Divider,Grid,FormControl,TextField} from '@mui/material'
+import { Container,Grid,FormControl,TextField} from '@mui/material'
 import React from 'react'
 import Header from './Header'
 import "./Men.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEnvelope, faHeart, faLocationDot, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 function Contact() {
   return (

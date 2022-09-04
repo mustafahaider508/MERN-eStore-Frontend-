@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faHeart, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
+import {  faHeart, faPhone, faUser } from '@fortawesome/free-solid-svg-icons'
 import Dummy from '../Dummy';
 import Navbar from './Navbar';
 import Hidden from '@mui/material/Hidden';

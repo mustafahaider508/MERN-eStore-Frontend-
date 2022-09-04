@@ -2,11 +2,9 @@ import { Grid } from '@mui/material';
 import React,{useState,useEffect} from 'react';
 import "./Product_Cart.css";
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import axios from 'axios';
@@ -14,8 +12,8 @@ import { Link } from 'react-router-dom';
 
 
 
-function Product_Card() {
-  const [value, setValue] = React.useState(4);
+function ProductCard() {
+  const [value] = React.useState(4);
   const[Data,setData] = useState([]);
 
 
@@ -75,4 +73,4 @@ function Product_Card() {
   )
 }
 
-export default Product_Card
+export default ProductCard

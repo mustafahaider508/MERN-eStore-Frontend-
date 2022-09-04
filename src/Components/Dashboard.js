@@ -1,11 +1,6 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { NavLink } from 'react-router-dom';
@@ -38,7 +33,7 @@ export default function Dashboard() {
           <Card style={{background:"#f8f8f8"}} variant='outlined' sx={{ maxWidth: 345 }}>
       <CardContent>
           <div style={{paddingBottom:"30px"}}>
-          <img src="logo.png" />
+          <img src="logo.png" alt='' />
           <h5>Fashion store</h5>
           <h6>750 followers | 10 review</h6>
          <h6>mark.enderess@mail.com</h6>
