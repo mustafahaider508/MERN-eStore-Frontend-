@@ -51,7 +51,7 @@ function ProductCard() {
              {i.title}
             </Typography>
             <Typography style={{ fontWeight: 600,fontSize: "17px", fontSamily: "Poppins,sans-serif",lineHeight: 1.35,  letterSpacing: "0.005em", marginBottom:"0.4rem", textOverflow: "ellipsis", overflow: "hidden",}} variant="h6" component="p">
-             $ {i.price}.00
+            €{i.price}.00
             </Typography>
           </CardContent>
         </CardActionArea>

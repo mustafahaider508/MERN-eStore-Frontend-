@@ -98,8 +98,8 @@ function Women() {
 
           
        
-          <h3>Women Collection</h3>
-          <h3>Home / Women Collection</h3>
+          <h3>DONNA Collection</h3>
+          <h3>DONNA / Women Collection</h3>
           </div>
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
@@ -236,7 +236,7 @@ function Women() {
             <div style={{paddingLeft:"0px"}}>
                 <Rating style={{fontSize:"20px"}} name="read-only" value={value} readOnly  />
                 <p style={{color:"grey",lineHeight:"1"}}>{i.title}</p>
-                <p style={{fontWeight:600,lineHeight:"0",color:"black"}}>{i.price}</p>
+                <p style={{fontWeight:600,lineHeight:"0",color:"black"}}>€{i.price}.00</p>
             </div>
         </div>
         </Link>
@@ -297,7 +297,7 @@ function Women() {
              {i.title}
             </Typography>
             <Typography style={{ fontWeight: 600,fontSize: "17px", fontSamily: "Poppins,sans-serif",lineHeight: 1.35,  letterSpacing: "0.005em", marginBottom:"0.4rem", textOverflow: "ellipsis", overflow: "hidden",}} variant="h6" component="p">
-             {i.price}
+            €{i.price}.00
             </Typography>
           </CardContent>
         </CardActionArea>

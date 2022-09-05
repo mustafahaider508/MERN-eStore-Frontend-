@@ -30,9 +30,9 @@ function Header() {
                 <div className='col-lg-6'>
                     <div className='header-content'>
                         <ul>
-                            <li>Welcome to 0rloCouture</li>
+                            <li>Benvenuto a 0rloCouture</li>
                             
-                            <li>    <FontAwesomeIcon className='icon' icon={faPhone} /> Call Us: +393664275077 </li>
+                          
                         </ul>
 
                     </div>

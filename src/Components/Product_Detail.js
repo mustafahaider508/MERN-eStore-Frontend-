@@ -57,7 +57,7 @@ var randomdata=Math.floor(Math.random()*arr);
   <h3>Home / Product Details</h3>
   </div>
       <Container style={{marginTop:"15px"}}>
-      <Grid container>
+      <Grid container >
       {ProductData.map(i => {
           return (
             <>
@@ -76,16 +76,16 @@ var randomdata=Math.floor(Math.random()*arr);
          </Grid>
          
          <Grid xs={12} md={6} lg={6}>
-                 <div>
+                 <div style={{marginLeft:"20px"}}>
                 <Typography  varient="p" style={{color: "#222529",fontSize: "2.4rem",fontWeight: 600,letterSpacing: "0rem",}} >{i.title}</Typography>
                 <Typography  varient="body1" style={{backgroundColor:"green",fontSize:"12px", color:"white",width:"15%",textAlign:"center",borderRadius:"12px",padding:"4px",}}>available</Typography>
                 <Divider style={{width:"20%",background:"#e7e7e7",border:"1px solid ", marginTop:"15px",}} />
 
-                 <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1.5rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>$ {i.price}</Typography>
-                 <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>Product Description</Typography>
+                 <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1.5rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>€{i.price}.00</Typography>
+                 <Typography  varient="body1" style={{marginTop:"25px",color: "#222529", fontSize: "1rem",fontWeight:600,verticalAlign: "middle",lineHeight: ".8",}}>Descrizione del prodotto</Typography>
                  <Typography  varient="body1" style={{color:"#777",marginTop:"20px",fontSize: "1.1rem",}}>{i.discription}</Typography>
                  <div style={{  display:"flex",marginTop:"30px",}}> 
-                 <Typography style={{fontSize:"15px", color:"#777",textTransform:"uppercase",}}>Catagory :</Typography>
+                 <Typography style={{fontSize:"15px", color:"#777",textTransform:"uppercase",}}>categoria:</Typography>
                  <Typography style={{fontSize:"15px",fontWeight:700,paddingLeft:"10px",textTransform:"uppercase",}}>{i.category}</Typography>
                  </div>
                 
@@ -94,7 +94,7 @@ var randomdata=Math.floor(Math.random()*arr);
                  <Divider />
                  </div>
                  <ReactWhatsapp style={{marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+393664275077" message={`Hey! I want to buy +${i.productimage} Title=${i.title} Price=${i.price}`} >
-                 Buy Now
+                 Acquista ora
                  </ReactWhatsapp>
                
                 
@@ -115,7 +115,8 @@ var randomdata=Math.floor(Math.random()*arr);
 
       <Container>
       <div style={{marginTop:"20px"}}>
-         <Typography style={{ marginTop:"50px",fontSize:"1.2rem",fontWeight:700,textTransform:"uppercase",}} variant="p">Related Products</Typography>
+         <Typography style={{ marginTop:"50px",fontSize:"1.2rem",fontWeight:700,textTransform:"uppercase",}} variant="p">
+prodotti correlati</Typography>
 
       
          

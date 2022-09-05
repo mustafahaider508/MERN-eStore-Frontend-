@@ -46,9 +46,9 @@ function Navbar() {
                             <div className='main-navbar'>
                                 <ul className='nav-menu'>
                                   <li  ><NavLink className="link" style={{textDecoration:"none"}} to='/'>Home</NavLink></li>
-                                    <li  ><NavLink className="link" to='/shop'>Shop</NavLink> </li>
-                                    <li  ><NavLink className="link" to='/about'>About</NavLink> </li>
-                                    <li  ><NavLink className="link" to='/contact'>Contact</NavLink> </li>
+                                    <li  ><NavLink className="link" to='/shop'>Negozio</NavLink> </li>
+                                    <li  ><NavLink className="link" to='/about'>Chi siamo</NavLink> </li>
+                                    <li  ><NavLink className="link" to='/contact'>Contatti</NavLink> </li>
                                     {/* <li ><NavLink className="link" to='/signin'>Signin</NavLink> </li>
                                     <li ><NavLink className="link" to='/signup'>Signup</NavLink> </li> */}
                                     

@@ -15,8 +15,8 @@ function BeforeFooter() {
                     <div  style={{display:"flex",alignItems:"center",justifyContent:"center",borderRight:"1px solid #999"}}>
                     <FontAwesomeIcon style={{fontSize:"45px",alignSelf:"center",paddingRight:"10px",color:"orangered" }} icon={faTruckFast} /> 
                         <div style={{flexDirection:"column",alignItems:"center"}}>
-                        <h4 style={{fontSize:"20px",lineHeight:"2"}}>FREE SHIPPING</h4>
-                        <p  style={{fontSize:"15px",lineHeight:"0",color:"#999",fontWeight:"600"}}>Free Shipping World Wide</p>
+                        <h4 style={{fontSize:"20px",lineHeight:"2"}}>SPEDIZIONE GRATUITA</h4>
+                        <p  style={{fontSize:"15px",lineHeight:"0",color:"#999",fontWeight:"600"}}>Spedizione gratuita in tutto il mondo</p>
                         </div>
                         
                     </div>
@@ -26,8 +26,8 @@ function BeforeFooter() {
                     <div  style={{display:"flex",alignItems:"center",justifyContent:"center",borderRight:"1px solid #999" }}>
                     <FontAwesomeIcon style={{fontSize:"45px",alignSelf:"center",paddingRight:"10px",color:"orangered" }} icon={faClockFour} /> 
                         <div style={{flexDirection:"column",alignItems:"center"}}>
-                        <h4 style={{fontSize:"20px",lineHeight:"2"}}>24 X 7 SERVICE</h4>
-                        <p  style={{fontSize:"15px",lineHeight:"0",color:"#999",fontWeight:"600"}}>Online Service For New Customer</p>
+                        <h4 style={{fontSize:"20px",lineHeight:"2"}}>SERVIZIO 24 X 7</h4>
+                        <p  style={{fontSize:"15px",lineHeight:"0",color:"#999",fontWeight:"600"}}>Servizio in linea per il nuovo cliente</p>
                         </div>
                         
                     </div>
@@ -37,8 +37,8 @@ function BeforeFooter() {
                     <div style={{display:"flex",alignItems:"center",justifyContent:"center" }}>
                     <FontAwesomeIcon style={{fontSize:"45px",alignSelf:"center",paddingRight:"10px",color:"orangered" }} icon={faBullhorn} /> 
                         <div style={{flexDirection:"column",alignItems:"center"}}>
-                        <h4 style={{fontSize:"20px",lineHeight:"2"}}>FESTIVAL OFFER</h4>
-                        <p  style={{fontSize:"15px",lineHeight:"0",color:"#999",fontWeight:"600"}}>New Online Special Festival Offer</p>
+                        <h4 style={{fontSize:"20px",lineHeight:"2"}}>OFFERTA FESTIVAL</h4>
+                        <p  style={{fontSize:"15px",lineHeight:"0",color:"#999",fontWeight:"600"}}>Nuova Offerta Speciale Festival Online</p>
                         </div>
                         
                     </div>

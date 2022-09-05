@@ -10,22 +10,14 @@ function Contact() {
     <>
     <Header />
     <div className='background_pic'>
-          <h3>Contact </h3>
-          <h3>Contact US</h3>
+          <h3>Contatti </h3>
+          <h3>Contattaci</h3>
           </div>
      <Container maxWidth="lg" style={{marginTop:"30px",marginBottom:"30px"}}>
          <Grid container>
              <Grid item lg={6}>
-                 <h2 style={{marginTop:"25px",paddingLeft:"10px"}}>Contact Us</h2>
-                 <div style={{display:"flex",alignItems:"end",margin:"8px"}}>
-                     <div style={{textAlign:"center",borderRight:"2px solid rgb(248, 248, 248)",padding:"10px"}}> 
-                     <FontAwesomeIcon  className='icon' icon={faPhone} />
-                         <p style={{textTransform:"uppercase",fontWeight:600,color:"orangered"}}>Contact</p>
-                
-                     </div>
-                  
-                     <p style={{padding:"10px"}}>+393664275077</p>
-                 </div>
+                 <h2 style={{marginTop:"25px",paddingLeft:"10px"}}>Contattaci</h2>
+                 
                  <div style={{display:"flex",alignItems:"end",margin:"8px"}}>
                      <div style={{textAlign:"center",borderRight:"2px solid rgb(248, 248, 248)",padding:"10px"}}> 
                      <FontAwesomeIcon  className='icon' icon={faLocationDot} />
@@ -47,7 +39,7 @@ function Contact() {
 
              </Grid>
              <Grid item lg={6}>
-             <h2 style={{marginTop:"20px"}}>Get In Touch</h2>
+             <h2 style={{marginTop:"20px"}}>Mettiti in contatto</h2>
              <FormControl fullWidth sx={{ m: 1 }}><TextField  fullWidth  name="name" maxWidth="" id="standard-basic" label="name" variant="outlined"/></FormControl>
              <FormControl fullWidth sx={{ m: 1 }}><TextField  fullWidth  name="email" maxWidth="" id="standard-basic" label="email" variant="outlined"/></FormControl>
              <FormControl fullWidth sx={{ m: 1 }}><TextField  fullWidth  name="subject" maxWidth="" id="standard-basic" label="subject" variant="outlined"/></FormControl>

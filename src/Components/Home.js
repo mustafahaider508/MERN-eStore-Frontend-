@@ -12,12 +12,12 @@ function Home() {
   return (
     <>
        <Header />
-       <Sliderhome />
    <Catagories />
       <ProductCard />
       <BackgroundPic />
-      <p className='specialOffer'>Special Offer</p>
-    <h2 className='headingg1'>SPECIAL PRODUCTS</h2>
+      <p className='specialOffer'>
+Offerta speciale</p>
+    <h2 className='headingg1'>ORLO PRIVÈS</h2>
       <div className='dividerr'></div>
       <ProductCard2 />
       <BeforeFooter />   

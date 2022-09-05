@@ -23,7 +23,7 @@ function Dummy() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        My account
+      Il mio account
       </Button>
       <Menu
         id="basic-menu"

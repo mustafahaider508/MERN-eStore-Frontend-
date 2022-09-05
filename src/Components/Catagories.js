@@ -9,8 +9,8 @@ function Catagories() {
     <>
     <div className='container'>
         
-    <h2 className='headingg'>Shop By Catagories</h2>
-      <div className='dividerr'></div>
+ 
+ 
 
         
 
@@ -25,7 +25,7 @@ function Catagories() {
        
     </Card>
     <h3 className='heading'  >
-          Men
+    Uomo
         </h3>
         </NavLink>
         </Grid>
@@ -36,14 +36,14 @@ function Catagories() {
        
     </Card>
     <h3 className="heading" variant="h4" >
-          Women
+    Donna
         </h3>
         </NavLink>
         </Grid>
     </Grid>
     </div>
-    <p className='specialOffer'>Special Offer</p>
-    <h2 className='headingg1'>TOP COLLECTION</h2>
+  
+    <h2 className='headingg1'>Orlo Privè</h2>
       <div className='dividerr'></div>
     </>
   )
