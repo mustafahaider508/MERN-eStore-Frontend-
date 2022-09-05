@@ -15,6 +15,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Rating from '@mui/material/Rating';
 import Slider from '@mui/material/Slider';
 import  API from './Api.js';
+import { Link } from 'react-router-dom';
 
 
 
@@ -218,6 +219,7 @@ function Shop() {
 
         </CardContent>
      
+     
 
     </Card>
     <Typography style={{padding:"10px",fontWeight:600}}>TOP RATED PRODUCTS</Typography>
@@ -225,6 +227,7 @@ function Shop() {
     {ProductData.slice(0,4).map(i => {
       return (
         <>
+           <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
         <div style={{display:"flex",alignItems:"center", paddingBottom:"10px"}} >
             <img style={{width:"100px",padding:0,margin:0}} src={i.productimage} alt='' />
             <div style={{paddingLeft:"10px"}}>
@@ -233,6 +236,7 @@ function Shop() {
                 <p style={{fontWeight:600,lineHeight:"0"}}>{i.price}</p>
             </div>
         </div>
+        </Link>
         </>
       )
     })}
@@ -248,6 +252,7 @@ function Shop() {
             <>
             
             <Grid item xs={6} md={6} lg={3} >
+            <Link style={{textDecoration:"none"}} to={`/product_detail/${i._id}`}>
           <Card variant="outlined" sx={{ maxWidth: 325 }} style={{border:"none"}}>
         <CardActionArea>
           <CardMedia style={{height:"60vh"}} image={i.productimage} />
@@ -267,6 +272,7 @@ function Shop() {
         </CardActionArea>
         
       </Card>
+      </Link>
 
           </Grid>
          
