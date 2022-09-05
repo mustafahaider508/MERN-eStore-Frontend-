@@ -9,35 +9,12 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/material/styles';
+
 import Container from '@mui/material/Container';
 import axios from "axios";
 import Header from "./Header";
 import "./Men.css";
 import { useNavigate } from 'react-router-dom';
-
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginBottom:"40px",
-    background:"#fff",
-    marginTop: theme.spacing(8),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', 
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
 
 export default function SignIn() {
   const Navigate = useNavigate();
@@ -45,23 +22,27 @@ export default function SignIn() {
     email:"",
     password:""
   })
+  const [msg,setmsg] = useState('');
 
   var changedata=(e)=>{
     setuserdata({...userdata,[e.target.name]:e.target.value})
   }
-  const classes = useStyles();
+
 
 
   var submit=(e)=>{
     e.preventDefault()
-    axios.post("https://fivrr1.herokuapp.com/signin",userdata).then((res)=>{console.log(res.data)}).then((err)=>{console.log(err)})
-    console.log(userdata);
-    Navigate("/product");
-    // if(userdata.email === [...userdata].email){
-    //   Navigate("/dashboard");
-    // }else{
-    //   console.log("error");
-    // }
+    axios.post("https://fivrr1.herokuapp.com/signin",userdata).then((res) => {setmsg(res.data);console.log(res.data)}).then((err)=>{console.log(err)})
+    // console.log(userdata);
+    console.log(msg.msg);
+    // Navigate("/product");
+
+     if(msg.msg === "log In Successful"){
+       alert("Login Successfully");
+      Navigate("/product");
+     }else{
+       alert("Inavlid email or password");
+     }
 
     
   }
@@ -79,14 +60,14 @@ export default function SignIn() {
   </div>
     <div style={{background:"#fff"}}>
     <Container    maxWidth="xs">
-      <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
+      <div style={{ marginTop:"30px",display:'flex',flexDirection:'column',alignItems:'center',}}>
+        <Avatar style={{margin:"10px", backgroundColor: "orangered",}}>
         <AccountCircleIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form style={{   width: '100%', marginTop:"25px",}} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
@@ -117,14 +98,13 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Button style={{backgroundColor:"orangered"}}
+          <Button style={{marginTop:"20px",backgroundColor:"orangered",marginBottom:"5px"}}
             type="submit"
             fullWidth
             onClick={submit}
             variant="contained"
             color="primary"
-            className={classes.submit}
-          >
+            >
             Sign In
           </Button>
           <Grid container>

@@ -71,10 +71,10 @@ console.log('Client',products);
     <Card style={{background:"#f8f8f8"}} variant='outlined' sx={{ maxWidth: 345 }}>
 <CardContent>
     <div style={{paddingBottom:"30px"}}>
-    <img src="logo.png" alt=''/>
+    <img src="Orlo Couturepng.png" alt=''/>
     <h5>Fashion store</h5>
     <h6>750 followers | 10 review</h6>
-   <h6>mark.enderess@mail.com</h6>
+   <h6>Info@orlocouture.com</h6>
    </div>
     <h4>
     <NavLink className="link" to='/product'>
