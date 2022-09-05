@@ -254,7 +254,7 @@ function WomenAccessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://static-01.daraz.pk/p/e0ceac5af3ebf6f01f26cc4907393c9d.jpg" alt='' />
+                <img  style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.24.36_AM-removebg-preview.png" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -265,7 +265,7 @@ function WomenAccessories() {
                 <Grid item xs={12} lg={4}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/w_br">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/736x/72/b9/03/72b903c22663b15d29fc003dbaf1f60d--trends--jewelry-trends.jpg" alt=''/>
+                <img style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.13.55_AM-removebg-preview.png" alt=''/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -275,7 +275,7 @@ function WomenAccessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_er">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://img.joomcdn.net/e9fd63a5b12570c86a1db887c1df87bf1ba44c84_original.jpeg" alt='' />
+                <img  style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.10.27_AM-removebg-preview.png" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",

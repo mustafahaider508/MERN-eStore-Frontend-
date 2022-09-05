@@ -78,8 +78,8 @@ export default function  Mobnav() {
     
       <AppBar variant='outlined' style={{backgroundColor:"white",color:'black'}} position="fixed" open={open}>
         <Toolbar>
-          <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-          <img style={{padding:0,margin:0}} src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} alt="" />
+          <Typography style={{justifyContent:"center",alignItems:"center",textAlign:"center",alignContent:"center",alignSelf:'center'}} variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
+          <img  style={{padding:0,width:"220px"}} src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} alt="" />
           </Typography>
           <IconButton
             color="inherit"
@@ -113,12 +113,12 @@ export default function  Mobnav() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <img  src={process.env.PUBLIC_URL + '/Orlo Couturepng.png'} alt="" />
+        
         <List>
          <Link style={{textDecoration:"none",color:"black"}} to='/'><ListItem>Home</ListItem></Link> 
-         <Link style={{textDecoration:"none",color:"black"}} to='/shop'><ListItem>Shop</ListItem></Link> 
-         <Link style={{textDecoration:"none",color:"black"}} to='/about'><ListItem>About</ListItem></Link> 
-         <Link style={{textDecoration:"none",color:"black"}} to='/contact'><ListItem>Contact</ListItem></Link> 
+         <Link style={{textDecoration:"none",color:"black"}} to='/shop'><ListItem>Negozio</ListItem></Link> 
+         <Link style={{textDecoration:"none",color:"black"}} to='/about'><ListItem>Chi siamo</ListItem></Link> 
+         <Link style={{textDecoration:"none",color:"black"}} to='/contact'><ListItem>Contatti</ListItem></Link> 
    
         
         </List>

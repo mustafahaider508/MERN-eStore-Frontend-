@@ -251,7 +251,7 @@ function MenAccessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/27/25/74/2725743413e79678fcd7097edd497a1c.jpg" alt=''/>
+                <img  style={{width:"100%",height:"50vh"}} src="/WhatsApp_Image_2022-09-05_at_5.11.16_AM-removebg-preview.png" alt=''/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -262,7 +262,7 @@ function MenAccessories() {
                 <Grid item xs={12} lg={4}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/men_ne">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2019-06-10-at-1-17-25-pm-1560187061.png?crop=0.668xw:0.472xh;0.204xw,0.215xh&resize=480:*" alt='' />
+                <img style={{width:"100%",height:"50vh"}} src="/WhatsApp_Image_2022-09-05_at_5.09.03_AM-removebg-preview.png" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -272,7 +272,7 @@ function MenAccessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/men_e">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/550x/4d/71/cc/4d71cc91364275bb13bbc14047d1df78.jpg" alt='' />
+                <img  style={{width:"100%",height:"50vh"}} src="/WhatsApp_Image_2022-09-05_at_5.11.00_AM-removebg-preview.png" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",

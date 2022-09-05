@@ -252,7 +252,7 @@ function Abbigliamento() {
                 <Grid item  xs={12}   lg={6}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/27/25/74/2725743413e79678fcd7097edd497a1c.jpg" alt="" />
+                <img  style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.11.16_AM-removebg-preview.png" alt="" />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
@@ -263,7 +263,7 @@ function Abbigliamento() {
                 <Grid item xs={12} lg={6}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/customize">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="https://i.pinimg.com/originals/e1/49/5f/e1495f2d499747bc6e42f9aa9646305f.jpg" alt="" />
+                <img style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.17.07_AM-removebg-preview.png" alt="" />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
