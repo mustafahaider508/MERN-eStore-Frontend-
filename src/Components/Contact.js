@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './Header'
 import "./Men.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLocationDot} from '@fortawesome/free-solid-svg-icons'
 
 function Contact() {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Sliderhome from './Slider_home';
 import Catagories from './Catagories';
 import ProductCard from './Product_Card';
 import ProductCard2 from './Product_Card2';
