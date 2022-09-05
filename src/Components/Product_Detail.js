@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {Grid,Typography,Container,Card,CardMedia,Divider,CardActionArea,CardContent} from "@material-ui/core";
+import {Grid,Typography,Container,Card,CardMedia,Divider,CardActionArea,CardContent} from "@mui/material";
 import Rating from '@mui/material/Rating';
 import API from "./Api"
 import "./Men.css"
