@@ -13,14 +13,7 @@ function Footer() {
                 
             </Grid>
            
-            <Grid items xs={12} md={6} lg={3}> 
-            <h4 style={{color: "#222",marginBottom: "25px",textTransform: "uppercase",fontWeight: 700,fontSize: "18px",
-   lineHeight: "1"}}>store information</h4> 
-      
-      <p style={{color: "#777",textTransform: "capitalize",fontSize: "14px"}}>Mandaci una email: Info@orlocouture.com</p>
-
-            </Grid>
-
+              
         </Grid>
         </Container>
       

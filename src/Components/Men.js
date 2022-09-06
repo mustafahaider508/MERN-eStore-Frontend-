@@ -250,7 +250,7 @@ function Men() {
                 <Grid item  xs={12}   lg={6}>
                   <NavLink  style={{textDecoration:"none",color:"black"}} to="/abbigliamento">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="/WhatsApp_Image_2022-09-05_at_5.10.11_AM-removebg-preview.png" alt='' />
+                <img  style={{width:"100%",height:"50vh"}} src="men_ab.jpeg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",

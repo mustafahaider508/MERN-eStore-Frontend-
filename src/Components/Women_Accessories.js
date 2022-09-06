@@ -254,7 +254,7 @@ function WomenAccessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_vintage">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.24.36_AM-removebg-preview.png" alt='' />
+                <img  style={{width:"100%",height:"50vh"}} src="womenv.jpeg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -265,7 +265,7 @@ function WomenAccessories() {
                 <Grid item xs={12} lg={4}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/w_br">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.13.55_AM-removebg-preview.png" alt=''/>
+                <img style={{width:"100%",height:"50vh"}} src="womenb.jpeg" alt=''/>
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
@@ -275,7 +275,7 @@ function WomenAccessories() {
                 <Grid item  xs={12}   lg={4}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_er">
                 <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
-                <img  style={{width:"100%",height:"50vh"}} src="WhatsApp_Image_2022-09-05_at_5.10.27_AM-removebg-preview.png" alt='' />
+                <img  style={{width:"100%",height:"50vh"}} src="womene.jpeg" alt='' />
 
                 </Card>
                 <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
