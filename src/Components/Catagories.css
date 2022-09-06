@@ -24,12 +24,12 @@ img{
     width: 100%;
 }
 .heading{
-     background: rgb(255, 255, 255);
-     color: rgb(0, 0, 0);
+     background-color: orangered;
+     color: white;
      text-align: center;
      font-size: 35px;
      font-family: Georgia, 'Times New Roman', Times, serif;
-     background: rgb(237, 236, 236);
+  
   
    
     

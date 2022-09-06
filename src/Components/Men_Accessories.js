@@ -254,7 +254,7 @@ function MenAccessories() {
                 <img  style={{width:"100%",height:"50vh"}} src="manv.jpeg" alt=''/>
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"330px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>Vintage</p>
                 </NavLink>
                
@@ -265,7 +265,7 @@ function MenAccessories() {
                 <img style={{width:"100%",height:"50vh"}} src="menb.jpeg" alt='' />
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"330px",fontSize: "25px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>bracciali e anelli</p>
                  </NavLink>
                 </Grid>
@@ -275,7 +275,7 @@ function MenAccessories() {
                 <img  style={{width:"100%",height:"50vh"}} src="mene.jpeg" alt='' />
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"330px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"330px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>collane e orecchini</p>
                 </NavLink>
                

@@ -255,7 +255,7 @@ function Abbigliamento() {
                 <img  style={{width:"100%",height:"50vh"}} src="manv.jpeg" alt="" />
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalized" }}>VINTAGE</p>
                 </NavLink>
                
@@ -266,7 +266,7 @@ function Abbigliamento() {
                 <img style={{width:"100%",height:"50vh"}} src="menc.jpeg" alt="" />
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center" }}>CUSTOMIZED</p>
                  </NavLink>
                 </Grid>

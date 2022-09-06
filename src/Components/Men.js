@@ -253,7 +253,7 @@ function Men() {
                 <img  style={{width:"100%",height:"50vh"}} src="men_ab.jpeg" alt='' />
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalized" }}>ABBIGLIAMENTO</p>
                 </NavLink>
                
@@ -264,7 +264,7 @@ function Men() {
                 <img style={{width:"100%",height:"50vh"}} src="WhatsApp Image 2022-09-05 at 5.09.36 AM.jpeg" alt='' />
 
                 </Card>
-                <p style={{backgroundColor:"#eee",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center" }}>ACCESSORI</p>
                  </NavLink>
                 </Grid>

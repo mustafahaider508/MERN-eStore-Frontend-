@@ -18,7 +18,6 @@ import Wcustomised from './Components/W_customised';
 import  WBraceletsRings from "./Components/W_Bracelets_Rings"
 import WER from "./Components/W_ER"
 import ProductDetail from './Components/Product_Detail';
-import Footer from './Components/Footer';
 import Dashboard from './Components/Dashboard';
 import Product from './Components/Product';
 import Veiwproducts from './Components/Veiw_products';
@@ -64,7 +63,7 @@ function App() {
          
       
          </Routes>
-         <Footer />
+      
          
          </BrowserRouter>
     
