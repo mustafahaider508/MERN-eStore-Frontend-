@@ -9,10 +9,7 @@ function Contact() {
   return (
     <>
     <Header />
-    <div className='background_pic'>
-          <h3>Contatti </h3>
-          <h3>Contattaci</h3>
-          </div>
+    
      <Container maxWidth="lg" style={{marginTop:"30px",marginBottom:"30px"}}>
          <Grid container>
              <Grid item lg={6}>

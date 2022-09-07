@@ -88,14 +88,7 @@ function MenNecklacesEarrings() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>Collane E Orecchini Collection</h3>
-          <h3>Home / Men / Accessories/ Collane E Orecchini Collection</h3>
-          </div>
+    
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 

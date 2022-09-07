@@ -7,10 +7,7 @@ function About() {
   return (
     <>
       <Header />
-      <div className='background_pic'>
-          <h3>About </h3>
-          <h3>About US</h3>
-          </div>
+      
 
           <Container maxWidth="lg">
               <Grid container spacing={4}>

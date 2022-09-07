@@ -48,14 +48,7 @@ var randomdata=Math.floor(Math.random()*arr);
   return (
     <div>
       <Header />
-      <div className='background_pic'>
-  
-
-          
-       
-  <h3>Product Details</h3>
-  <h3>Home / Product Details</h3>
-  </div>
+   
       <Container style={{marginTop:"15px"}}>
       <Grid container >
       {ProductData.map(i => {

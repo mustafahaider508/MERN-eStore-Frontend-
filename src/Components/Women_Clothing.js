@@ -92,15 +92,7 @@ function WomenClothing() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>Abbigliamento Collection</h3>
-          <h3>Home / Abbigliamento Collection</h3>
-          </div>
-
+     
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 
        
@@ -253,7 +245,7 @@ function WomenClothing() {
                 <img style={{width:"100%",height:"50vh"}} src="womenv.jpeg"  alt=""/>
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"400px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"uppercase" }}>vintage</p>
                 </NavLink>
                
@@ -264,7 +256,7 @@ function WomenClothing() {
                 <img style={{width:"100%",height:"50vh"}} src="womenc.jpeg" alt="" />
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"400px",fontSize: "25px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"uppercase" }}>customized</p>
                  </NavLink>
                 </Grid>

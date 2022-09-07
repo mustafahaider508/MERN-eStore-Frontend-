@@ -89,14 +89,7 @@ function Shop() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>NEGOZIO </h3>
-          <h3>NEGOZIO / Collezione</h3>
-          </div>
+     
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 

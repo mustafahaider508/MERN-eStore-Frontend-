@@ -92,14 +92,7 @@ function Customize() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>Customize Collection</h3>
-          <h3>Home / Men / Abbigliamento/ Customized Collection</h3>
-          </div>
+      
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 

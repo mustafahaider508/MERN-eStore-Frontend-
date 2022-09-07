@@ -90,14 +90,7 @@ function  WER() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>collane e orecchini Collection</h3>
-          <h3>Home / Men / Accessories/ collane e orecchini Collection</h3>
-          </div>
+      
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 

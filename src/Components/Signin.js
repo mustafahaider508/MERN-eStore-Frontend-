@@ -50,14 +50,7 @@ export default function SignIn() {
   return (
     <>
     <Header />
-  <div className='background_pic'>
   
-
-          
-       
-  <h3>SignIn</h3>
-  <h3>Home / SignIn</h3>
-  </div>
     <div style={{background:"#fff"}}>
     <Container    maxWidth="xs">
       <div style={{ marginTop:"30px",display:'flex',flexDirection:'column',alignItems:'center',}}>

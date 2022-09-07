@@ -93,14 +93,7 @@ function Women() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>DONNA Collection</h3>
-          <h3>DONNA / Women Collection</h3>
-          </div>
+      
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 
@@ -256,7 +249,7 @@ function Women() {
                 <img style={{width:"100%",height:"50vh"}} src="womenab.jpeg" alt="" />
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"400px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"uppercase" }}>abbigliamento</p>
                 </NavLink>
                
@@ -267,7 +260,7 @@ function Women() {
                 <img style={{width:"100%",height:"50vh"}} src="womenass.jpeg" alt=""/>
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"400px",fontSize: "25px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center" }}>ACCESSORI</p>
                  </NavLink>
                 </Grid>

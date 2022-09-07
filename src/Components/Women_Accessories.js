@@ -93,14 +93,7 @@ function WomenAccessories() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>Collane E Orecchini</h3>
-          <h3>Home / Men / Women Accessories / Collane E Orecchini  Collection</h3>
-          </div>
+      
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 
@@ -257,7 +250,7 @@ function WomenAccessories() {
                 <img  style={{width:"100%",height:"50vh"}} src="womenv.jpeg" alt='' />
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"330px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"330px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>Vintage</p>
                 </NavLink>
                
@@ -268,7 +261,7 @@ function WomenAccessories() {
                 <img style={{width:"100%",height:"50vh"}} src="womenb.jpeg" alt=''/>
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"330px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"330px",fontSize: "25px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>bracciali e anelli</p>
                  </NavLink>
                 </Grid>
@@ -278,7 +271,7 @@ function WomenAccessories() {
                 <img  style={{width:"100%",height:"50vh"}} src="womene.jpeg" alt='' />
 
                 </Card>
-                <p style={{backgroundColor:"orangered",color:"white",width:"330px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",width:"330px",fontSize: "25px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"capitalize" }}>collane e orecchini</p>
                 </NavLink>
                

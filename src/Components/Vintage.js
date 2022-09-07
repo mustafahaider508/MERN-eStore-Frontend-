@@ -89,14 +89,7 @@ function Vintage() {
     <div>
       <Header />
      
-      <div className='background_pic'>
-  
-
-          
-       
-          <h3>Vintage Collection</h3>
-          <h3>Home / Men / Abbigliamento/ Vintage Collection</h3>
-          </div>
+    
 
         <Container style={{marginTop:"30px"}} maxWidth="xl">
 
