@@ -2,78 +2,78 @@ import { Grid,Container } from '@mui/material';
 import React,{useState,useEffect} from 'react'
 import Header from './Header'
 import "./Men.css";
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
+// import CardActions from '@mui/material/CardActions';
 import CardActionArea from '@mui/material/CardActionArea';
-import Collapse from '@mui/material/Collapse';
-import IconButton from '@mui/material/IconButton';
+// import Collapse from '@mui/material/Collapse';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Rating from '@mui/material/Rating';
-import Slider from '@mui/material/Slider';
+// import Slider from '@mui/material/Slider';
 import { Link, NavLink } from 'react-router-dom';
 import  API from './Api.js';
 
 
 
-const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-  })(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  }));
+// const ExpandMore = styled((props) => {
+//     const { expand, ...other } = props;
+//     return <IconButton {...other} />;
+//   })(({ theme, expand }) => ({
+//     transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+//     marginLeft: 'auto',
+//     transition: theme.transitions.create('transform', {
+//       duration: theme.transitions.duration.shortest,
+//     }),
+//   }));
 
-  function valuetext(valuee) {
-    return `${valuee}°C`;
-  }
+//   function valuetext(valuee) {
+//     return `${valuee}°C`;
+//   }
 
-  const marks = [
-    {
-      value: 0,
-      label: '0',
-    },
+//   const marks = [
+//     {
+//       value: 0,
+//       label: '0',
+//     },
     
-    {
-      value: 100,
-      label: '100',
-    },
-  ];
+//     {
+//       value: 100,
+//       label: '100',
+//     },
+//   ];
   
 
 function Women() {
   const[ProductData,SetProductData] = useState([]);
-    const [expanded, setExpanded] = React.useState(false);
-    const [expanded1, setExpanded1] = React.useState(false);
-    const [expanded2, setExpanded2] = React.useState(false);
-    const [expanded3, setExpanded3] = React.useState(false);
+    // const [expanded, setExpanded] = React.useState(false);
+    // const [expanded1, setExpanded1] = React.useState(false);
+    // const [expanded2, setExpanded2] = React.useState(false);
+    // const [expanded3, setExpanded3] = React.useState(false);
     const [value] = React.useState(4);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
+  // const handleExpandClick = () => {
+  //   setExpanded(!expanded);
    
-  };
-  const handleExpandClick1 = () => {
-    setExpanded1(!expanded1);
-  };
-  const handleExpandClick2 = () => {
-    setExpanded2(!expanded2);
-  };
-  const handleExpandClick3 = () => {
-    setExpanded3(!expanded3);
-  };
+  // };
+  // const handleExpandClick1 = () => {
+  //   setExpanded1(!expanded1);
+  // };
+  // const handleExpandClick2 = () => {
+  //   setExpanded2(!expanded2);
+  // };
+  // const handleExpandClick3 = () => {
+  //   setExpanded3(!expanded3);
+  // };
 
-  const [valuee, setValuee] = React.useState([0, 1000]);
+  // const [valuee, setValuee] = React.useState([0, 1000]);
 
-  const handleChange = (event, newValue) => {
-    setValuee(newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValuee(newValue);
+  // };
 
   useEffect(() =>{
     fetch(`${API}/getproduct`)
@@ -95,11 +95,11 @@ function Women() {
      
       
 
-        <Container style={{marginTop:"30px"}} maxWidth="xl">
+        <Container style={{marginTop:"30px"}} maxWidth="lg">
 
        
           <Grid container>
-              <Grid item xs={12} md={6} lg={3}> 
+              {/* <Grid item xs={12} md={6} lg={3}> 
                 
               <Card variant='outlined' sx={{ maxWidth: 300 }}>
    
@@ -239,28 +239,28 @@ function Women() {
     })}
       
     
-              </Grid>
-              <Grid item xs={12} md={6} lg={9}> 
+              </Grid> */}
+              <Grid item xs={12} md={6} lg={12}> 
 
               <Grid container>
               <Grid item  xs={12} lg={6}>
                   <NavLink style={{textDecoration:"none",color:"black"}} to="/w_clothing">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
+                <Card    style={{height:"50vh",borderRadius:"10px"}} sx={{ maxWidth: 440 }}>
                 <img style={{width:"100%",height:"50vh"}} src="womenab.jpeg" alt="" />
 
                 </Card>
-                <p style={{backgroundColor:"#9c1003",color:"white",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",fontSize: "25px",width:"440px",
               fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center",textTransform:"uppercase" }}>abbigliamento</p>
                 </NavLink>
                
                 </Grid>
                 <Grid item xs={12} lg={6}>
                 <NavLink style={{textDecoration:"none",color:"black"}} to="/w_accessories">
-                <Card    style={{height:"40vh",borderRadius:"10px"}} sx={{ maxWidth: 400 }}>
+                <Card    style={{height:"50vh",borderRadius:"10px"}} sx={{ maxWidth: 440 }}>
                 <img style={{width:"100%",height:"50vh"}} src="womenass.jpeg" alt=""/>
 
                 </Card>
-                <p style={{backgroundColor:"#9c1003",color:"white",width:"400px",fontSize: "25px",
+                <p style={{backgroundColor:"#9c1003",color:"white",fontSize: "25px",width:"440px",
                fontFamily: "Georgia, 'Times New Roman', Times, serif",textAlign:"center" }}>ACCESSORI</p>
                  </NavLink>
                 </Grid>

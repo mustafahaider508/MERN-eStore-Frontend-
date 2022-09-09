@@ -12,10 +12,8 @@ function Home() {
        <Header />
    <Catagories />
       <ProductCard />
-     
-      <p className='specialOffer'>
-Offerta speciale</p>
-    <h2 className='headingg1'>ORLO PRIVÈS</h2>
+      <p className='specialOffer'>Offerta speciale</p>
+    <h2 className='headingg1'>ORLO PRIVÈ</h2>
       <div className='dividerr'></div>
       <ProductCard2 />
       <BeforeFooter />   
