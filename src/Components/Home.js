@@ -5,12 +5,14 @@ import ProductCard from './Product_Card';
 import ProductCard2 from './Product_Card2';
 import "./Catagories.css"
 import BeforeFooter from './BeforeFooter';
+import BackgroundPic from './BackgroundPic';
 
 function Home() {
   return (
     <>
        <Header />
-   <Catagories />
+       <BackgroundPic />
+     <Catagories />
       <ProductCard />
       <p className='specialOffer'>Offerta speciale</p>
       <h2 className='headingg1'>ORLO PRIVÈ</h2>
