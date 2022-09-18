@@ -1,11 +1,33 @@
-import { Container,Grid,FormControl,TextField} from '@mui/material'
-import React from 'react'
+import { Container,Grid,FormControl,TextField,Button} from '@mui/material'
+import React,{useState} from 'react'
 import Header from './Header'
 import "./Men.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLocationDot} from '@fortawesome/free-solid-svg-icons'
+import ReactWhatsapp from 'react-whatsapp';
 
 function Contact() {
+    const [name,setname] = useState("");
+    const [email,setemail] = useState("");
+    const[sub,setsub] = useState("");
+    const [mesg,setmesg] = useState("");
+
+    const [allEntry,setnewEntry] = useState([]);
+
+  const Submit = (e) => {
+      e.preventDefault();
+      const newEntry = {name:name,email:email,sub:sub,mesg:mesg};
+      setnewEntry([...allEntry,newEntry]);
+      alert("Submitted SuccessFully!");
+      setname("");
+      setemail("");
+      setsub("");
+      setmesg("");
+  
+  }
+
+
+
   return (
     <>
     <Header />
@@ -35,18 +57,30 @@ function Contact() {
                  </div>
 
              </Grid>
+             
              <Grid item lg={6}>
              <h2 style={{marginTop:"20px"}}>Mettiti in contatto</h2>
-             <FormControl fullWidth sx={{ m: 1 }}><TextField  fullWidth  name="name" maxWidth="" id="standard-basic" label="name" variant="outlined"/></FormControl>
-             <FormControl fullWidth sx={{ m: 1 }}><TextField  fullWidth  name="email" maxWidth="" id="standard-basic" label="email" variant="outlined"/></FormControl>
-             <FormControl fullWidth sx={{ m: 1 }}><TextField  fullWidth  name="subject" maxWidth="" id="standard-basic" label="subject" variant="outlined"/></FormControl>
-             <FormControl fullWidth sx={{ m: 1 }}>
-            <TextField  name="message" id="outlined-multiline-static" label="Message" multiline rows={3} />  
-            </FormControl>
-            <button  style={{border:"none",padding:"10px",width:"200px",backgroundColor:"orangered",color:"white",marginLeft:"10px"}}>Submit</button>
+             <form >
+         <input style={{padding:"10px",width:"100%",margin:"10px"}} value={name} onChange={e => setname(e.target.value)}  name="name" placeholder='name' /> <br />
+           <input  style={{padding:"10px",width:"100%",margin:"10px"}} value={email} onChange={e => setemail(e.target.value)}   name="email" placeholder='email' /> <br />
+           <input  style={{padding:"10px",width:"100%",margin:"10px"}} value={sub}  onChange={e => setsub(e.target.value)}   name="subject" placeholder='subject' /> <br />
+         
+            <input  style={{padding:"10px",width:"100%",margin:"10px"}} value={mesg} onChange={e => setmesg(e.target.value)}  name="message" placeholder='message' />  
+          
+            <Button onClick={Submit} style={{margin:"10px",marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+393664275077"  >
+                    Acquista ora
+                    </Button> 
+            </form>
+          
+                 
+             
+                  
+    
+           
+               
              </Grid>
 
-         </Grid>
+         </Grid> 
      </Container>
     </>
   )
