@@ -25,6 +25,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Mobnav from './Components/Mobnav';
 import MenNecklacesEarrings from './Components/Men_ Bracelets_Rings';
+import BackgroundPic from './Components/BackgroundPic';
 
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
          <BrowserRouter>
          <Routes>
        
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<BackgroundPic />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />

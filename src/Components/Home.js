@@ -11,7 +11,6 @@ function Home() {
   return (
     <>
        <Header />
-       <BackgroundPic />
      <Catagories />
       <ProductCard />
       <p className='specialOffer'>Offerta speciale</p>
