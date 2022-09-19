@@ -1,32 +1,35 @@
 import { Container,Grid,FormControl,TextField,Button} from '@mui/material'
-import React,{useState} from 'react'
+import React,{useState,useRef } from 'react'
 import Header from './Header'
 import "./Men.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faLocationDot} from '@fortawesome/free-solid-svg-icons'
-import ReactWhatsapp from 'react-whatsapp';
+import emailjs from '@emailjs/browser';
+
+const Result = () => {
+    return <p style={{color:"green"}}>your message has been send Successfully!</p>
+}
 
 function Contact() {
-    const [name,setname] = useState("");
-    const [email,setemail] = useState("");
-    const[sub,setsub] = useState("");
-    const [mesg,setmesg] = useState("");
-
-    const [allEntry,setnewEntry] = useState([]);
-
-  const Submit = (e) => {
+ 
+    const [result,showresult] = useState(false);
+    const form = useRef();
+    const sendEmail = (e) => {
       e.preventDefault();
-      const newEntry = {name:name,email:email,sub:sub,mesg:mesg};
-      setnewEntry([...allEntry,newEntry]);
-      alert("Submitted SuccessFully!");
-      setname("");
-      setemail("");
-      setsub("");
-      setmesg("");
   
-  }
+      emailjs.sendForm('service_mya9dd8', 'template_17sfwye', form.current, 'KhE0p8mkM3oKmw5pZ')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+        showresult(true);
+    };
 
-
+    setTimeout(() =>{
+        showresult(false);
+    },5000)
 
   return (
     <>
@@ -60,21 +63,20 @@ function Contact() {
              
              <Grid item lg={6}>
              <h2 style={{marginTop:"20px"}}>Mettiti in contatto</h2>
-             <form >
-         <input style={{padding:"10px",width:"100%",margin:"10px"}} value={name} onChange={e => setname(e.target.value)}  name="name" placeholder='name' /> <br />
-           <input  style={{padding:"10px",width:"100%",margin:"10px"}} value={email} onChange={e => setemail(e.target.value)}   name="email" placeholder='email' /> <br />
-           <input  style={{padding:"10px",width:"100%",margin:"10px"}} value={sub}  onChange={e => setsub(e.target.value)}   name="subject" placeholder='subject' /> <br />
-         
-            <input  style={{padding:"10px",width:"100%",margin:"10px"}} value={mesg} onChange={e => setmesg(e.target.value)}  name="message" placeholder='message' />  
+             <form  ref={form} onSubmit={sendEmail}>
+         <input style={{padding:"10px",width:"100%",margin:"10px"}} type="text"  name="user_name"  placeholder='name' /> <br />
+           <input  style={{padding:"10px",width:"100%",margin:"10px"}} type="email" name="user_email" placeholder='email' /> <br />
+           <input  style={{padding:"10px",width:"100%",margin:"10px"}} type="text" name="user_sub" placeholder='subject' /> <br />
+            <textarea  style={{padding:"10px",width:"100%",margin:"10px"}} name="message" placeholder='message' />  
           
-            <Button onClick={Submit} style={{margin:"10px",marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} number="+393664275077"  >
-                    Acquista ora
-                    </Button> 
+            <input style={{margin:"10px",marginTop:"20px",backgroundColor:"orangered",color:"white", width:"30%", padding:"9px",}} type="submit" value="Send" placeholder="Acquista ora" />
+                   
+                   
             </form>
           
-                 
+               <div>{result ? <Result /> : null}</div>  
              
-                  
+        
     
            
                
