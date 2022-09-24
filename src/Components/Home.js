@@ -5,7 +5,7 @@ import ProductCard from './Product_Card';
 import ProductCard2 from './Product_Card2';
 import "./Catagories.css"
 import BeforeFooter from './BeforeFooter';
-import BackgroundPic from './BackgroundPic';
+
 
 function Home() {
   return (
