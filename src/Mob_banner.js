@@ -1,9 +1,9 @@
 import React from 'react';
-import { Grid ,Hidden} from '@mui/material';
+import { Grid } from '@mui/material';
 import { Link } from "react-router-dom";
 
 
-function Mob_banner() {
+function MobBanner() {
   return (
     <>
    <Link to="/home">
@@ -19,4 +19,4 @@ function Mob_banner() {
   )
 }
 
-export default Mob_banner
+export default MobBanner
